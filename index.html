@@ -426,6 +426,121 @@
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
+    
+<!-- Scripts -->
+<script>
+    // CV Data
+    const cvData = {
+        professionalSummary: `
+            Results-oriented, enthusiastic student pursuing a Bachelor of Technology in Communication and Computer Networks and has artisan qualification in Electrical Engineering. 
+            I have hands-on experience in electrical installation, maintenance, and solar system implementation. 
+            I can do some programming and web design and has an online portfolio website. 
+            Able to deliver good customer service and work well under pressure. 
+            I can prioritize my work to meet deadlines, work independently, and as part of a team to produce quality work.
+        `,
+        education: [
+            {
+                degree: "Bachelor of Technology in Communication and Computer Networks",
+                institution: "The Technical University of Kenya",
+                duration: "2023 – Present",
+            },
+            {
+                degree: "Artisan in Electrical Engineering",
+                institution: "St. Kizito Vocational Training Institute",
+                duration: "2023 – 2024",
+            },
+            {
+                degree: "Kenya Certificate of Secondary Education (KCSE)",
+                institution: "Sawagongo Boys High School",
+                grade: "B Plain",
+                duration: "2019 – 2022",
+            },
+            {
+                degree: "Kenya Certificate of Primary Education (KCPE)",
+                institution: "Karapul Primary School",
+                score: "347",
+                duration: "2011 – 2018",
+            },
+        ],
+        workExperience: [
+            {
+                role: "Electrical Technician",
+                company: "Self-Employed",
+                duration: "2023 - Present",
+                responsibilities: [
+                    "Conduct repairs, installation, and maintenance on several electrical devices to ensure they are efficient and safe to use.",
+                    "Conduct electrical installations in domestic and commercial buildings to ensure that the work done will meet the required standards concerning safety.",
+                    "Involved in installing and repairing machines at production plants to maximize production.",
+                    "Assist in the installation of the solar system, hence contributing to a sustainable environment by providing clients with clean energy.",
+                ],
+            },
+        ],
+        skills: [
+            "Technical Expertise: Strong understanding of electrical systems, electronics, and renewable energy technologies.",
+            "Programming Skills: Familiar with HTML, CSS, and JavaScript.",
+            "Web Design: Experience designing responsive websites and my online portfolio with a focus on user experience.",
+            "Customer Service Excellence: Committed to understanding client needs and providing solutions tailored to their needs.",
+            "Teamwork: Experience working in diverse teams to deliver project results.",
+            "Multitasking Ability: Proficient in handling multiple priorities effectively in dynamic and fast-paced environments.",
+        ],
+    };
+
+    // Populate Professional Summary
+    document.getElementById("professionalSummary").innerText = cvData.professionalSummary;
+
+    // Populate Education
+    const educationContainer = document.getElementById("educationContainer");
+    cvData.education.forEach((edu) => {
+        const educationElement = `
+            <div class="box">
+                <div class="content">
+                    <h3>${edu.degree}</h3>
+                    <p>${edu.institution}</p>
+                    <h4>${edu.duration}</h4>
+                    ${edu.grade ? `<p>Grade: ${edu.grade}</p>` : ""}
+                    ${edu.score ? `<p>Score: ${edu.score}</p>` : ""}
+                </div>
+            </div>
+        `;
+        educationContainer.innerHTML += educationElement;
+    });
+
+    // Populate Work Experience
+    const workContainer = document.getElementById("workContainer");
+    cvData.workExperience.forEach((work) => {
+        const workElement = `
+            <div class="box tilt">
+                <div class="content">
+                    <div class="tag">
+                        <h3>${work.role}</h3>
+                        <p>${work.company}</p>
+                    </div>
+                    <div class="desc">
+                        <p>${work.duration}</p>
+                        <ul>
+                            ${work.responsibilities.map((resp) => `<li>${resp}</li>`).join("")}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+        workContainer.innerHTML += workElement;
+    });
+
+    // Populate Skills
+    const skillsContainer = document.getElementById("skillsContainer");
+    cvData.skills.forEach((skill) => {
+        const skillElement = `
+            <div class="bar">
+                <div class="info">
+                    <span>${skill}</span>
+                </div>
+            </div>
+        `;
+        skillsContainer.innerHTML += skillElement;
+    });
+</script>
+
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>

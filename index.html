@@ -6,213 +6,429 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Collins Otieno, portfolio, Collins, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Collins's Portfolio. Full-Stack Web Developer and Android App Developer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Collins Otieno</title>
 </head>
 <body oncontextmenu="return false">
 
-<!-- Navbar -->
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
 <header>
-    <h1><a href="/"><i></i> Collins</a></h1>
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-        <ul>
+       <h1> <a href="/"><i></i> Collins</a> </h1>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 </header>
+<!-- navbar ends -->
 
-<!-- Home Section -->
+
+<!-- hero section starts -->
 <section class="home" id="home">
-    <div class="content">
-        <h2>Hi There,<br/> I'm Collins <span>Otieno</span></h2>
-        <p>I am into <span class="typing-text"></span></p>
-        <a href="#about" class="btn"><span>About Me</span><i class="fas fa-arrow-circle-down"></i></a>
-    </div>
-</section>
+    <div id="particles-js"></div>
 
-<!-- About Section -->
+    <div class="content">
+    <h2>Hi There,<br/> I'm Colins <span>Otieno</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://x.com/collooceo?t=GRkjVHsbjPYsFX1cR4kLnw&s=09" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="t.me/Colloceo" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/invites/contact/?igsh=cG01Zzg5NnM0eTFv&utm_content=u4lmw6v"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="" target="_blank"><i class="fab fa-dev"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+     <img draggable="false" class="tilt" src="" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
 <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
     <div class="row">
+
+    <div class="image">
+      <img src = "./assets/images/profile.jpg">
+    </div>
+    <div class="content">
+        <h3>I'm Collins</h3>
+        <span class="tag">Full Stack Developer</span>
+        
+        <p>
+            I am a Full-Stack Developer based in Nairobi, Kenya, currently pursuing a degree in Communication and Computer Networks at The Technical University of Kenya. I am passionate about enhancing my coding skills and developing innovative applications and websites. My expertise lies in building Web Applications and Websites using the MERN Stack (MongoDB, Express.js, React, Node.js).
+        </p>
+        <p>
+            At present, I work independently to refine my skills and enjoy creating Full-Stack clones of popular applications. Additionally, I have a strong background in Electrical and Electronics Engineering, allowing me to assess and resolve issues in electrical setups. This diverse skill set enables me to tackle challenges from both software and hardware perspectives, ensuring comprehensive solutions.
+        </p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 19</p>
+              <p><span> phone : </span>+254768581254</p>
+            </div> -->
+            <div class="box">
+              <p><span> email : </span> otienocollins0549@gmail.com</p>
+              <p><span> place : </span> Nairobi, Kenya</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="container">
+          <div class="row" id="skillsContainer">
+
+            <!-- <div class="bar">
+              <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
+                <span>AdobeXD</span>
+              </div>
+            </div> -->
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
+
+    <div class="box-container">
+
+
+    <div class="box">
         <div class="image">
-            <img src="./assets/images/profile.jpg" alt="Profile Image">
+        <img draggable="false" src="https://ayoma.co.ug/wp-content/uploads/2023/04/Technical-University-of-Kenya-3.jpg" alt="">
         </div>
         <div class="content">
-            <h3>I'm Collins</h3>
-            <span class="tag">Full Stack Developer</span>
-            <p id="professionalSummary"></p>
+        <h3>Bachelor of Technology Communication And Computer Networks</h3>
+        <p>The Technical University Of Kenya</p>
+        <h4>2023-2027 | Pursuing</h4>
         </div>
     </div>
-</section>
 
-<!-- Skills Section -->
-<section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-    <div class="container">
-        <div class="row" id="skillsContainer"></div>
+  <div class="box">
+      <div class="image">
+      <img draggable="false" src="https://th.bing.com/th/id/OIP.1b00QvFLZZylz6ky5npdrgHaEJ?rs=1&pid=ImgDetMain" alt="">
+      </div>
+      <div class="content">
+      <h3>Electrical and Solar Installation</h3>
+      <p>St.Kizito</p>
+      <h4>2023-2024 | Completed</h4>
+      </div>
     </div>
-</section>
 
-<!-- Education Section -->
-<section class="education" id="education">
-    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-    <div class="box-container" id="educationContainer"></div>
-</section>
+   <div class="box">
+        <div class="image">
+        <img draggable="false" src="https://i.ytimg.com/vi/sJeeWN75c7U/maxresdefault.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>Kenya Certificate of Secondary Education</h3>
+        <p>Sawagongo Boys High School</p>
+        <h4>2019-2022 | Completed</h4>
+        </div>
+    </div>
 
-<!-- Work Section -->
+ <div class="box">
+        <div class="image">
+        <img draggable="false" src="https://www.epnetwork.org/wp-content/uploads/2019/07/alforja.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>Kenya Certificate of Primary Education</h3>
+        <p>Karapul Primary School</p>
+        <h4>2014-2018 | Completed</h4>
+        </div>
+    </div>
+ 
+</div>
+</section>
+<!-- education section ends -->
+
+
+<!-- work project section starts 
 <section class="work" id="work">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Work <span>Experience</span></h2>
-    <div class="box-container" id="workContainer"></div>
-</section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-    <div class="container">
-        <form id="contact-form">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="text" name="email" placeholder="Email" required>
-                <textarea placeholder="Message" name="message" required></textarea>
-            </div>
-            <div class="button-area">
-                <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
-            </div>
-        </form>
-    </div>
-</section>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
-<!-- Footer Section -->
-<section class="footer">
-    <div class="box-container">
-        <div class="box">
-            <h3>Collins's Portfolio</h3>
-            <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+  <div class="box-container">
+
+    <!-- <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>Portfolio Website</h3>
         </div>
-    </div>
+        <div class="desc">
+          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
+          <div class="btns">
+            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+</div>
+
+<div class="viewall">
+  <a href="/projects" class="btn"><span>View All</span>
+    <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
 </section>
+<!-- work project section ends -->
 
-<!-- Scripts -->
-<script>
-    // CV Data
-    const cvData = {
-        professionalSummary: `
-            Results-oriented, enthusiastic student pursuing a Bachelor of Technology in Communication and Computer Networks and has artisan qualification in Electrical Engineering. 
-            I have hands-on experience in electrical installation, maintenance, and solar system implementation. 
-            I can do some programming and web design and has an online portfolio website. 
-            Able to deliver good customer service and work well under pressure. 
-            I can prioritize my work to meet deadlines, work independently, and as part of a team to produce quality work.
-        `,
-        education: [
-            {
-                degree: "Bachelor of Technology in Communication and Computer Networks",
-                institution: "The Technical University of Kenya",
-                duration: "2023 – Present",
-            },
-            {
-                degree: "Artisan in Electrical Engineering",
-                institution: "St. Kizito Vocational Training Institute",
-                duration: "2023 – 2024",
-            },
-            {
-                degree: "Kenya Certificate of Secondary Education (KCSE)",
-                institution: "Sawagongo Boys High School",
-                grade: "B Plain",
-                duration: "2019 – 2022",
-            },
-            {
-                degree: "Kenya Certificate of Primary Education (KCPE)",
-                institution: "Karapul Primary School",
-                score: "347",
-                duration: "2011 – 2018",
-            },
-        ],
-        workExperience: [
-            {
-                role: "Electrical Technician",
-                company: "Self-Employed",
-                duration: "2023 - Present",
-                responsibilities: [
-                    "Conduct repairs, installation, and maintenance on several electrical devices to ensure they are efficient and safe to use.",
-                    "Conduct electrical installations in domestic and commercial buildings to ensure that the work done will meet the required standards concerning safety.",
-                    "Involved in installing and repairing machines at production plants to maximize production.",
-                    "Assist in the installation of the solar system, hence contributing to a sustainable environment by providing clients with clean energy.",
-                ],
-            },
-        ],
-        skills: [
-            "Technical Expertise: Strong understanding of electrical systems, electronics, and renewable energy technologies.",
-            "Programming Skills: Familiar with HTML, CSS, and JavaScript.",
-            "Web Design: Experience designing responsive websites and my online portfolio with a focus on user experience.",
-            "Customer Service Excellence: Committed to understanding client needs and providing solutions tailored to their needs.",
-            "Teamwork: Experience working in diverse teams to deliver project results.",
-            "Multitasking Ability: Proficient in handling multiple priorities effectively in dynamic and fast-paced environments.",
-        ],
-    };
+<!-- experience section starts 
+<section class="experience" id="experience">
 
-    // Populate Professional Summary
-    document.getElementById("professionalSummary").innerText = cvData.professionalSummary;
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
 
-    // Populate Education
-    const educationContainer = document.getElementById("educationContainer");
-    cvData.education.forEach((edu) => {
-        const educationElement = `
-            <div class="box">
-                <div class="content">
-                    <h3>${edu.degree}</h3>
-                    <p>${edu.institution}</p>
-                    <h4>${edu.duration}</h4>
-                    ${edu.grade ? `<p>Grade: ${edu.grade}</p>` : ""}
-                    ${edu.score ? `<p>Score: ${edu.score}</p>` : ""}
-                </div>
-            </div>
-        `;
-        educationContainer.innerHTML += educationElement;
-    });
+  <div class="timeline">
 
-    // Populate Work Experience
-    const workContainer = document.getElementById("workContainer");
-    cvData.workExperience.forEach((work) => {
-        const workElement = `
-            <div class="box tilt">
-                <div class="content">
-                    <div class="tag">
-                        <h3>${work.role}</h3>
-                        <p>${work.company}</p>
-                    </div>
-                    <div class="desc">
-                        <p>${work.duration}</p>
-                        <ul>
-                            ${work.responsibilities.map((resp) => `<li>${resp}</li>`).join("")}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        `;
-        workContainer.innerHTML += workElement;
-    });
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Self Employed</h2>
+        </div>
+        <div class="desc">
+            <h3>Full Stack Developer</h3>
+            <p>Oct 2021 - present</p>
+        </div>
+      </div>
+    </div>
 
-    // Populate Skills
-    const skillsContainer = document.getElementById("skillsContainer");
-    cvData.skills.forEach((skill) => {
-        const skillElement = `
-            <div class="bar">
-                <div class="info">
-                    <span>${skill}</span>
-                </div>
-            </div>
-        `;
-        skillsContainer.innerHTML += skillElement;
-    });
-</script>
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Mapstreak Flyseas</h2>
+        </div>
+        <div class="desc">
+            <h3>Web Developer | Internship</h3>
+            <p>June 2021 - Dec 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>The Spark Foundation</h2>
+        </div>
+        <div class="desc">
+            <h3>Website Developer | Internship</h3>
+            <p>May 2021 - June 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>The Spark Foundation</h2>
+        </div>
+        <div class="desc">
+            <h3>Mobile Application Developer | Internship</h3>
+            <p>April 2021 - May 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Frshr Technologies</h2>
+        </div>
+        <div class="desc">
+            <h3>Wordpress Developer | Internship</h3>
+            <p>April 2021 - April 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>WonderingBlog</h2>
+        </div>
+        <div class="desc">
+            <h3>Web Development & SEO | Internship</h3>
+            <p>March 2021 - April 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="morebtn">
+    <a href="/experience" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+
+</div>
+
+</section>
+ experience section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+    <form id="contact-form">
+      
+      <div class="form-group">
+        <div class="field">
+          <input type="text" name="name" placeholder="Name" required>
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Email" required>
+          <i class='fas fa-envelope'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="phone" placeholder="Phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="message">
+        <textarea placeholder="Message" name="message" required></textarea>
+        <i class="fas fa-comment-dots"></i>
+        </div>
+        </div>
+      <div class="button-area">
+        <button type="submit">
+          Submit <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Collins's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+254768581254</p>
+          <p> <i class="fas fa-envelope"></i>otienocollins0549@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Nairobi, Kenya</p>
+          <div class="share">
+
+              <a href="" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/colloceo" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto: otienocollins0549@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+              <a href="" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> Collins Otieno</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
 
 </body>
 </html>

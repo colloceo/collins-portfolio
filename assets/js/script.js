@@ -67,11 +67,10 @@ $(document).ready(function () {
     });
 
     // Typed.js effect for typing animation
-    var typed = new Typed(".typing-text", {
+var typed = new Typed(".typing-text", {
         strings: [
             "frontend development", 
-            "backend development", 
-            "database design & management",
+            "backend development",
             "electrical installation",
             "solar installation",
         ],

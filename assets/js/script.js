@@ -71,15 +71,9 @@ $(document).ready(function () {
         strings: [
             "frontend development", 
             "backend development", 
-            "web designing", 
-            "android development", 
-            "web development", 
-            "database designing",
-            "database management",
-            "graphics designing", 
+            "database design & management",
             "electrical installation",
             "solar installation",
-            "machines"
         ],
         loop: true,
         typeSpeed: 50,

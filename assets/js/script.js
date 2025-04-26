@@ -71,8 +71,7 @@ var typed = new Typed(".typing-text", {
         strings: [
             "frontend development", 
             "backend development",
-            "electrical installation",
-            "solar installation",
+            "web development",
         ],
         loop: true,
         typeSpeed: 50,

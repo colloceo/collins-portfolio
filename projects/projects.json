@@ -2,7 +2,7 @@
   {
     "name": "Solar System Installation",
     "desc": "Designed and installed a solar power system for a residential client, including panels, inverters, and battery storage. Ensured safety compliance and optimized energy efficiency, contributing to sustainable energy solutions.",
-    "image": "solar_installation",
+    "image": "kchat",
     "category": "electrical",
     "links": {
       "view": "#",
@@ -10,33 +10,53 @@
     }
   },
   {
-    "name": "Personal Portfolio Website",
-    "desc": "Developed a responsive personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects. Designed custom graphics with Adobe Photoshop to enhance visual appeal.",
-    "image": "portfolio",
-    "category": "basicweb",
+    "name": "memes254ke",
+    "desc": "A modern Kenyan meme-sharing platform with likes, comments, meme categories, social media sharing, and infinite scrolling for a fun user experience.",
+    "image": "memes254ke",
+    "category": "webapp",
     "links": {
       "view": "#",
       "code": "#"
     }
   },
   {
-    "name": "Composey Landing Page",
-    "desc": "Built a modern landing page for a client using HTML, CSS, and JavaScript, incorporating JavaScript libraries for animations. Created engaging visuals with Adobe Illustrator to improve user experience.",
-    "image": "composey",
-    "category": "basicweb",
+    "name": "Vidloader",
+    "desc": "A modern platform and software for downloading videos and audios from famous social media platforms : TikTok, Instagram, YouTube and X. An initial release for the Windows desktop version is already out.",
+    "image": "memes254ke",
+    "category": "software",
     "links": {
-      "view": "https://composey.netlify.app/",
-      "code": "https://github.com/colloceo/composey"
+      "view": "#",
+      "code": "#"
     }
   },
   {
-    "name": "JavaScript Projects Showcase",
-    "desc": "Created a website to display a collection of JavaScript-based projects, built with HTML, CSS, and JavaScript. Designed custom thumbnails and graphics using Adobe Photoshop for a cohesive presentation.",
-    "image": "jsprojects",
-    "category": "basicweb",
+    "name": "UrbanPulse",
+    "desc": "A modern Kenyan ecommerce platform built with PHP and integrated with mpesa daraja API for Mpesa payments.",
+    "image": "memes254ke",
+    "category": "webapp",
     "links": {
-      "view": "https://jigar-sable.github.io/JavaScript-Projects",
-      "code": "https://github.com/colloceo/javascript-projects"
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "POS System",
+    "desc": "A Django-powered point-of-sale system featuring inventory management, sales processing, customer profiles, analytics, and reporting tools.",
+    "image": "pos_system",
+    "category": "software",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Collins Browser",
+    "desc": "A simple, professional desktop browser built with PyQt, featuring bookmarks, downloads, history, dark mode, and a modern user-friendly interface.",
+    "image": "pyqt_browser",
+    "category": "software",
+    "links": {
+      "view": "#",
+      "code": "#"
     }
   }
 ]

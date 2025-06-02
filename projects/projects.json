@@ -1,22 +1,22 @@
 [
   {
-    "name": "Solar System Installation",
-    "desc": "Designed and installed a solar power system for a residential client, including panels, inverters, and battery storage. Ensured safety compliance and optimized energy efficiency, contributing to sustainable energy solutions.",
+    "name": "JuaKALI",
+    "desc": "A web application designed to empower Kenyan artisans by providing a marketplace to showcase and sell their crafts. Built with PHP, MySQL, and Bootstrap, this platform supports user authentication, product management, and artisan-specific features.",
     "image": "kchat",
-    "category": "electrical",
+    "category": "webapp",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://juuakali.ct.ws/",
+      "code": "https://github.com/colloceo/juakali"
     }
   },
   {
-    "name": "memes254ke",
-    "desc": "A modern Kenyan meme-sharing platform with likes, comments, meme categories, social media sharing, and infinite scrolling for a fun user experience.",
+    "name": "MemeTik",
+    "desc": "Memetik is a web-based meme-sharing platform developed by Memes254Ke where users can upload, browse, and interact with Kenyan-themed memes. The project is built using Django and Tailwind CSS.",
     "image": "memes254ke",
     "category": "webapp",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://collooceo.pythonanywhere.com/",
+      "code": "https://github.com/colloceo/memetik"
     }
   },
   {

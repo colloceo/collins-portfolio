@@ -1,7 +1,7 @@
 [
   {
     "name": "MaliMall",
-    "desc": "A web application designed to empower Kenyan artisans by providing a marketplace to showcase and sell their crafts. Built with PHP, MySQL, and Bootstrap.",
+    "desc": "A web application designed to empower Kenyan artisans by providing a marketplace to showcase and sell their crafts.",
     "image": "kchat",
     "category": "webapp",
     "links": {

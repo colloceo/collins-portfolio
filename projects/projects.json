@@ -1,62 +1,62 @@
 [
   {
-    "name": "MaliMall",
-    "desc": "A web application designed to empower Kenyan artisans by providing a marketplace to showcase and sell their crafts.",
-    "image": "kchat",
+    "name": "News254 – Laravel News Platform",
+    "desc": "A modern, fully-featured news management system built with Laravel. Features include mobile-responsive design, advanced SEO, social sharing, WebP optimization, and dark mode interface.",
+    "image": "https://iili.io/f9aPI3P.png",
     "category": "webapp",
     "links": {
-      "view": "https://juuakali.ct.ws/",
-      "code": "https://github.com/colloceo/juakali"
+      "view": "https://news254.co.ke",
+      "code": "https://github.com/colloceo/news254-laravel"
     }
   },
   {
-    "name": "MemeTik",
-    "desc": "Memetik is a web-based meme-sharing platform developed by Memes254Ke where users can upload, browse, and interact with Kenyan-themed memes. The project is built using Django and Tailwind CSS.",
-    "image": "memes254ke",
+    "name": "MaliMall — Kenyan Artisan E-Commerce Platform",
+    "desc": "MaliMall is a PHP–MySQL e-commerce platform designed to help Kenyan artisans showcase and sell handcrafted products. Features user and artisan accounts, product uploads with admin approval, responsive Bootstrap interface, secure M-Pesa payments, shopping cart functionality, and order tracking.",
+    "image": "https://iili.io/f9cDHQe.png",
     "category": "webapp",
     "links": {
-      "view": "https://collooceo.pythonanywhere.com/",
-      "code": "https://github.com/colloceo/memetik"
+      "view": "https://juuakali.ct.ws",
+      "code": "https://github.com/colloceo/MaliMall"
     }
   },
   {
-    "name": "Vidloader",
-    "desc": "A modern platform and software for downloading videos and audios from famous social media platforms : TikTok, Instagram, YouTube and X. An initial release for the Windows desktop version is already out.",
-    "image": "memes254ke",
-    "category": "software",
-    "links": {
-      "view": "#",
-      "code": "#"
-    }
-  },
-  {
-    "name": "UrbanPulse",
-    "desc": "A modern Kenyan ecommerce platform built with PHP and integrated with mpesa daraja API for Mpesa payments.",
-    "image": "memes254ke",
+    "name": "Zynk — Social Media Platform",
+    "desc": "Zynk is a Twitter-style social media platform built with PHP, MySQL, JavaScript, and CSS. It lets users create accounts, post text and images, like and comment on posts, search content, and view trending hashtags. Features light/dark themes, infinite scrolling, cached trending topics, real-time interaction via AJAX, and a fully responsive interface.",
+    "image": "https://iili.io/f9lFAkg.png",
     "category": "webapp",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://wantam.2kool4u.net",
+      "code": "https://github.com/colloceo/Zynk"
     }
   },
   {
-    "name": "Collins Portfolio",
-    "desc": "A personal portfolio website showcasing my projects, skills, and experiences. Built with HTML, CSS, and JavaScript, this site serves as a professional online presence.",
-    "image": "collins_portfolio",
+    "name": "UniExamHelper — AI-Powered Exam Assistant",
+    "desc": "UniExamHelper is a modern web application that helps university students solve exam questions using AI. Students can upload images, PDFs, documents, or type questions directly into a chat-style interface and receive detailed, step-by-step answers powered by Groq's Llama 3.1 model.",
+    "image": "https://iili.io/f9l5OnS.png",
     "category": "webapp",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://lambent-caramel-4f9e54.netlify.app/",
+      "code": "https://github.com/colloceo/UniExamHelper"
     }
   },
   {
-    "name": "Collins Browser",
-    "desc": "A simple, professional desktop browser built with PyQt, featuring bookmarks, downloads, history, dark mode, and a modern user-friendly interface.",
-    "image": "pyqt_browser",
-    "category": "software",
+    "name": "Snakes & Ladders — Web Game",
+    "desc": "A modern, web-based Snakes & Ladders game built with HTML, CSS, and JavaScript. It features smooth animations, dice-roll effects, a real-time game log, mobile-responsive design, and two game modes—play with a friend or against the computer.",
+    "image": "https://iili.io/f9lVUu9.png",
+    "category": "webapp",
     "links": {
-      "view": "#",
-      "code": "#"
+      "view": "https://colloceo.github.io/snakes/",
+      "code": "https://github.com/colloceo/snakes"
+    }
+  },
+  {
+    "name": "Digital Leap Africa — Live Learning & Career Platform",
+    "desc": "A Laravel & MySQL LMS empowering African youth with expert-led courses, career opportunities, real-world projects, and community engagement. Features include certifications, gamification, job board, forum, digital library, and a full admin CMS.",
+    "image": "https://iili.io/f9li9ob.png",
+    "category": "webapp",
+    "links": {
+      "view": "https://digitalleap.africa/",
+      "code": "https://github.com/osumba404/digital-leap-africa"
     }
   }
 ]

@@ -45,22 +45,32 @@ function showProjects(projects) {
     let projectsHTML = "";
     projects.forEach(project => {
         projectsHTML += `
-        <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+    <div class="project-card ${project.category === 'News254 – Laravel News Platform' ? 'featured' : ''}">
+      <div class="card-image">
+        <img src="${project.image}" alt="${project.name}" />
+        <div class="card-overlay">
+          <div class="tech-stack">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Laravel</span>
           </div>
         </div>
       </div>
-    </div>
+      <div class="card-content">
+        <div class="project-header">
+          <h3>${project.name}</h3>
+          ${project.category === 'News254 – Laravel News Platform' ? '<div class="project-status">Featured</div>' : ''}
+        </div>
+        <p class="project-description">${project.desc}</p>
+        <div class="card-actions">
+          <a href="${project.links.view}" class="btn-primary" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+          <a href="${project.links.code}" class="btn-secondary" target="_blank">
+            <i class="fab fa-github"></i> Code
+          </a>
+        </div>
+      </div>
     </div>`
     });
     projectsContainer.innerHTML = projectsHTML;

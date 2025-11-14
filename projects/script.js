@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -29,103 +28,65 @@ document.addEventListener('visibilitychange',
         }
     });
 
-
-// fetch projects start
-function getProjects() {
-    return fetch("projects.json")
+// Load and display projects
+function loadProjects() {
+    fetch("projects.json")
         .then(response => response.json())
-        .then(data => {
-            return data
-        });
+        .then(projects => {
+            const container = document.querySelector(".work .box-container");
+            let html = "";
+            
+            projects.forEach(project => {
+                html += `
+                <div class="project-card ${project.category}">
+                    <div class="card-image">
+                        <img src="${project.image}" alt="${project.name}" />
+                        <div class="card-overlay">
+                            <div class="tech-stack">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="project-header">
+                            <h3>${project.name}</h3>
+                        </div>
+                        <p class="project-description">${project.desc}</p>
+                        <div class="card-actions">
+                            <a href="${project.links.view}" class="btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="${project.links.code}" class="btn-secondary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            
+            container.innerHTML = html;
+            
+            // Simple filter functionality
+            $('.button-group').on('click', 'button', function () {
+                $('.button-group').find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+                const filterValue = $(this).attr('data-filter');
+                
+                if (filterValue === '*') {
+                    $('.project-card').show();
+                } else {
+                    $('.project-card').hide();
+                    $(filterValue).show();
+                }
+            });
+        })
+        .catch(error => console.error('Error loading projects:', error));
 }
 
-
-function showProjects(projects) {
-    let projectsContainer = document.querySelector(".work .box-container");
-    let projectsHTML = "";
-    projects.forEach(project => {
-        projectsHTML += `
-    <div class="project-card ${project.category === 'News254 – Laravel News Platform' ? 'featured' : ''}">
-      <div class="card-image">
-        <img src="${project.image}" alt="${project.name}" />
-        <div class="card-overlay">
-          <div class="tech-stack">
-            <span class="tech-tag">PHP</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Laravel</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-content">
-        <div class="project-header">
-          <h3>${project.name}</h3>
-          ${project.category === 'News254 – Laravel News Platform' ? '<div class="project-status">Featured</div>' : ''}
-        </div>
-        <p class="project-description">${project.desc}</p>
-        <div class="card-actions">
-          <a href="${project.links.view}" class="btn-primary" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Live Demo
-          </a>
-          <a href="${project.links.code}" class="btn-secondary" target="_blank">
-            <i class="fab fa-github"></i> Code
-          </a>
-        </div>
-      </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectsHTML;
-
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL PROJECTS */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
-    var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
-    });
-
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
-}
-
-getProjects().then(data => {
-    showProjects(data);
-})
-// fetch projects end
-
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
+// Initialize
+loadProjects();
 
 // disable developer mode
 document.onkeydown = function (e) {

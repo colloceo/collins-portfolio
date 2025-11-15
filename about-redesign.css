@@ -1,4 +1,28 @@
 /* About Section Redesign */
+.about {
+    background-image: url('./assets/images/profile.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.85);
+    z-index: 1;
+}
+
+.about > * {
+    position: relative;
+    z-index: 2;
+}
+
 .about .about-hero {
     display: flex;
     justify-content: center;

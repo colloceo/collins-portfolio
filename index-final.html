@@ -95,11 +95,6 @@
 </head>
 <body oncontextmenu="return false">
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
 <!-- navbar starts -->
 <header>
        <h1> <a href="/"><i></i> Collins</a> </h1>
@@ -118,7 +113,6 @@
         </nav>
 </header>
 <!-- navbar ends -->
-
 
 <!-- hero section starts -->
 <section class="home" id="home">
@@ -147,73 +141,104 @@
 </section>
 <!-- hero section ends -->
 
-
 <!-- about section starts -->
 <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
     
     <div class="about-container">
+        <!-- Left Column - Profile Card -->
         <div class="profile-card">
-            <div class="profile-image">
-                <img src="./assets/images/profile.jpg" alt="Collins Otieno - Full Stack Developer & Electrical Engineer from Nairobi Kenya">
-                <div class="image-overlay">
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/collins-otieno-450131362" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/colloceo" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:c.otieno@digitalleap.africa"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
+            <div class="profile-photo">
+                <img src="./assets/images/profile.jpg" alt="Collins Otieno">
+                <div class="glow-ring"></div>
             </div>
+            
             <div class="profile-info">
                 <h3>Collins Otieno</h3>
-                <span class="role">Full Stack Developer & Electrical Engineer</span>
-                <div class="contact-info">
-                    <div class="info-item">
+                <p class="subtitle">Full-Stack Developer & Electrical Engineer</p>
+                
+                <div class="contact-icons">
+                    <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <span>c.otieno@digitalleap.africa</span>
                     </div>
-                    <div class="info-item">
+                    <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Nairobi, Kenya</span>
                     </div>
                 </div>
-                <div class="resume-btn">
-                    <a href="https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link" target="_blank" class="btn">
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/collins-otieno-450131362" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/colloceo" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/collooceo" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://t.me/Colloceo" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link" target="_blank" class="btn-primary">
                         <i class="fas fa-download"></i>
-                        <span>Download Resume</span>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="about-content">
-    <div class="content">
-        <h3>I'm Collins Otieno</h3>
-        <span class="tag">Full Stack Developer & Electrical Engineer</span>
-        
-        <p>
-          Hey, I'm Collins Otieno. I'm a Full-Stack Web Developer and NITA-certified Electrical Engineer based in Nairobi, Kenya. Currently pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya.
-          </p>
-          <p>
-          I specialize in building modern web applications using Laravel, PHP, MySQL, HTML, CSS, and JavaScript. Notable projects include Digital Leap Africa (a comprehensive LMS platform for African youth), News254 (Laravel news management system), MaliMall (e-commerce platform for Kenyan artisans), and UniExamHelper (AI-powered exam assistant). I also provide freelance web development services.
-          </p>
-          <p>
-          As a NITA-certified Electrical and Electronics Engineering artisan, I bring hands-on expertise in electrical installations, solar systems, and renewable energy solutions. This unique blend of software development and hardware proficiency allows me to tackle complex problems from both perspectives, delivering comprehensive and impactful results. I’m eager to collaborate on cutting-edge tech projects, particularly in web development, AI, and penetration testing.
-          </p>
-        <div class="box-container">
-            <div class="box">
-              <p><span> email : </span> c.otieno@digitalleap.africa</p>
-              <p><span> place : </span> Nairobi, Kenya</p>
+        <!-- Right Column - About Text -->
+        <div class="about-text">
+            <div class="section-header">
+                <i class="fas fa-user"></i>
+                <h3>About Me</h3>
+            </div>
+            
+            <div class="text-section">
+                <h4>Who I Am</h4>
+                <p>Hey, I'm Collins Otieno, a Full-Stack Web Developer and NITA-certified Electrical Engineer based in Nairobi, Kenya. Currently pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya.</p>
+            </div>
+            
+            <div class="text-section">
+                <h4>What I Do</h4>
+                <p>I specialize in building modern web applications using <span class="highlight">Laravel</span>, <span class="highlight">PHP</span>, <span class="highlight">MySQL</span>, <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>. I also provide freelance web development services and electrical engineering solutions.</p>
+            </div>
+            
+            <div class="text-section">
+                <h4>Technical Skills</h4>
+                <div class="skills-badges">
+                    <span class="skill-badge">Laravel</span>
+                    <span class="skill-badge">PHP</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Solar Systems</span>
+                    <span class="skill-badge">Electrical Wiring</span>
+                </div>
+            </div>
+            
+            <div class="text-section">
+                <h4>Projects I've Built</h4>
+                <p>Notable projects include Digital Leap Africa (comprehensive LMS platform), News254 (Laravel news system), MaliMall (e-commerce for Kenyan artisans), and UniExamHelper (AI-powered exam assistant).</p>
+            </div>
+            
+            <div class="text-section">
+                <h4>Where I'm Based</h4>
+                <p>Located in Nairobi, Kenya, I bring hands-on expertise in electrical installations, solar systems, and renewable energy solutions. This unique blend allows me to tackle complex problems from both software and hardware perspectives.</p>
+            </div>
+            
+            <div class="text-section">
+                <h4>What I'm Currently Working On</h4>
+                <ul class="current-work">
+                    <li>Co-founding Digital Leap Africa - empowering African youth through technology</li>
+                    <li>Building modern web applications with Laravel and React</li>
+                    <li>Electrical installations and solar system implementations</li>
+                    <li>Exploring AI integration in web development projects</li>
+                </ul>
             </div>
         </div>
-        
-        <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-
-    </div>
     </div>
 </section>
 <!-- about section ends -->
@@ -380,7 +405,6 @@
 </section>
 <!-- skills section ends -->
 
-
 <!-- education section starts -->
 <section class="education" id="education">
 
@@ -459,7 +483,6 @@
 </div>
 </section>
 <!-- education section ends -->
-
 
 <!-- work project section starts -->
 <section class="work" id="work">
@@ -563,7 +586,7 @@
   <h2 class="heading"><i class="fas fa-briefcase"></i> Professional <span>Experience</span></h2>
 
   <div class="quote">
-    <span>“Every experience in your life is orchestrated to teach you something you need to move forward.”</span>
+    <span>"Every experience in your life is orchestrated to teach you something you need to move forward."</span>
   </div>
 
   <div class="experience-container">
@@ -709,7 +732,6 @@
 </section>
 <!-- experience section ends -->
 
-
 <!-- contact section starts -->
 <section class="contact" id="contact">
   
@@ -749,7 +771,6 @@
   </div>
 </section>
 <!-- contact section ends -->
-
 
 <!-- footer section starts -->
 <section class="footer">
@@ -792,11 +813,9 @@
 </section>
 <!-- footer section ends -->
 
-
 <!-- scroll top btn -->
 <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
 <!-- scroll back to top -->
-
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
 <!-- jquery cdn -->
@@ -810,7 +829,7 @@
 <script src="./assets/js/app.js"></script>
 
 <!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="SHA512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
@@ -819,143 +838,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
-
-    
-<!-- Scripts -->
-<script>
-    // CV Data
-    const cvData = {
-        professionalSummary: `
-            Results-oriented, enthusiastic student pursuing a Bachelor of Technology in Communication and Computer Networks and has artisan qualification in Electrical Engineering. 
-            I have hands-on experience in electrical installation, maintenance, and solar system implementation. 
-            I can do some programming and web design and has an online portfolio website. 
-            Able to deliver good customer service and work well under pressure. 
-            I can prioritize my work to meet deadlines, work independently, and as part of a team to produce quality work.
-        `,
-        education: [
-            {
-                degree: "Bachelor of Technology in Communication and Computer Networks",
-                institution: "The Technical University of Kenya",
-                duration: "2023 – Present",
-            },
-            {
-                degree: "Artisan in Electrical Engineering",
-                institution: "St. Kizito Vocational Training Institute",
-                duration: "2023 – 2024",
-            },
-            {
-                degree: "Kenya Certificate of Secondary Education (KCSE)",
-                institution: "Sawagongo Boys High School",
-                grade: "B Plain",
-                duration: "2019 – 2022",
-            },
-            {
-                degree: "Kenya Certificate of Primary Education (KCPE)",
-                institution: "Karapul Primary School",
-                score: "347",
-                duration: "2011 – 2018",
-            },
-        ],
-        workExperience: [
-            {
-                role: "Electrical Technician",
-                company: "Self-Employed",
-                duration: "2023 - Present",
-                responsibilities: [
-                    "Conduct repairs, installation, and maintenance on several electrical devices to ensure they are efficient and safe to use.",
-                    "Conduct electrical installations in domestic and commercial buildings to ensure that the work done will meet the required standards concerning safety.",
-                    "Involved in installing and repairing machines at production plants to maximize production.",
-                    "Assist in the installation of the solar system, hence contributing to a sustainable environment by providing clients with clean energy.",
-                ],
-            },
-        ],
-        skills: [
-            "Technical Expertise: Strong understanding of electrical systems, electronics, and renewable energy technologies.",
-            "Programming Skills: Familiar with HTML, CSS, and JavaScript.",
-            "Web Design: Experience designing responsive websites and my online portfolio with a focus on user experience.",
-            "Customer Service Excellence: Committed to understanding client needs and providing solutions tailored to their needs.",
-            "Teamwork: Experience working in diverse teams to deliver project results.",
-            "Multitasking Ability: Proficient in handling multiple priorities effectively in dynamic and fast-paced environments.",
-        ],
-    };
-
-    // Populate Professional Summary
-    document.getElementById("professionalSummary").innerText = cvData.professionalSummary;
-
-    // Populate Education
-    const educationContainer = document.getElementById("educationContainer");
-    cvData.education.forEach((edu) => {
-        const educationElement = `
-            <div class="box">
-                <div class="content">
-                    <h3>${edu.degree}</h3>
-                    <p>${edu.institution}</p>
-                    <h4>${edu.duration}</h4>
-                    ${edu.grade ? `<p>Grade: ${edu.grade}</p>` : ""}
-                    ${edu.score ? `<p>Score: ${edu.score}</p>` : ""}
-                </div>
-            </div>
-        `;
-        educationContainer.innerHTML += educationElement;
-    });
-
-    // Populate Work Experience
-    const workContainer = document.getElementById("workContainer");
-    cvData.workExperience.forEach((work) => {
-        const workElement = `
-            <div class="box tilt">
-                <div class="content">
-                    <div class="tag">
-                        <h3>${work.role}</h3>
-                        <p>${work.company}</p>
-                    </div>
-                    <div class="desc">
-                        <p>${work.duration}</p>
-                        <ul>
-                            ${work.responsibilities.map((resp) => `<li>${resp}</li>`).join("")}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        `;
-        workContainer.innerHTML += workElement;
-    });
-
-    // Populate Skills
-    const skillsContainer = document.getElementById("skillsContainer");
-    cvData.skills.forEach((skill) => {
-        const skillElement = `
-            <div class="bar">
-                <div class="info">
-                    <span>${skill}</span>
-                </div>
-            </div>
-        `;
-        skillsContainer.innerHTML += skillElement;
-    });
-
-    // Simple form submission handler
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        // Form will submit directly to email via mailto
-        alert('Opening your email client to send the message...');
-    });
-
-    // Simple image loading
-    document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.project-card img');
-        images.forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-            });
-            img.addEventListener('error', function() {
-                this.style.opacity = '0.5';
-                console.log('Image failed to load:', this.src);
-            });
-        });
-    });
-</script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
 

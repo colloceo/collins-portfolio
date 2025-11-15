@@ -1,0 +1,210 @@
+/* About Section Styles */
+.about {
+  background: #111111;
+  padding: 5rem 2rem;
+}
+
+.about .about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.about .profile-card {
+  background: #1a1a1a;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 2rem;
+}
+
+.about .profile-image {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.about .profile-image img {
+  width: 100%;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.about .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about .profile-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.about .social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.about .social-links a {
+  width: 50px;
+  height: 50px;
+  background: #00d4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.about .social-links a:hover {
+  background: #0099cc;
+  transform: translateY(-3px);
+}
+
+.about .profile-info h3 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about .role {
+  color: #00d4ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.about .contact-info {
+  margin-bottom: 2rem;
+}
+
+.about .info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+  font-size: 1.4rem;
+}
+
+.about .info-item i {
+  color: #00d4ff;
+  font-size: 1.6rem;
+  width: 20px;
+}
+
+.about .resume-btn .btn {
+  width: 100%;
+  padding: 1.5rem;
+  background: #00d4ff;
+  color: #0a0a0a;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.about .resume-btn .btn:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+}
+
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about .intro-text p {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  text-transform: none;
+  font-family: "Nunito", sans-serif;
+}
+
+.about .expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.about .expertise-card {
+  background: #1a1a1a;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about .expertise-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.about .card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about .card-icon i {
+  font-size: 2.5rem;
+  color: #00d4ff;
+}
+
+.about .expertise-card h4 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about .expertise-card p {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+@media (max-width: 768px) {
+  .about .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about .profile-card {
+    position: static;
+  }
+  
+  .about .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}

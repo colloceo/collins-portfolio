@@ -298,7 +298,7 @@
 
     <div class="project-card featured">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/news254.png" alt="News254 Laravel News Platform">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:1.8rem; font-weight:600;">News254</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">Laravel</span>
@@ -326,7 +326,7 @@
 
     <div class="project-card">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/malimall.png" alt="MaliMall Kenyan Artisan E-Commerce Platform">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:1.8rem; font-weight:600;">MaliMall</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">PHP</span>
@@ -353,7 +353,7 @@
 
     <div class="project-card">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/zynk.png" alt="Zynk Social Media Platform">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:1.8rem; font-weight:600;">Zynk</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">PHP</span>
@@ -380,7 +380,7 @@
 
     <div class="project-card">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/uniexamhelper.png" alt="UniExamHelper AI-Powered Exam Assistant">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #fa709a 0%, #fee140 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:1.8rem; font-weight:600;">UniExamHelper</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">React</span>
@@ -407,7 +407,7 @@
 
     <div class="project-card">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/snakes&ladders.png" alt="Snakes & Ladders Web Game">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display:flex; align-items:center; justify-content:center; color:#333; font-size:1.8rem; font-weight:600;">Snakes & Ladders</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">HTML</span>
@@ -434,7 +434,7 @@
 
     <div class="project-card">
       <div class="card-image">
-        <img draggable="false" src="./assets/images/digitalleap.png" alt="Digital Leap Africa Learning Platform">
+        <div style="width:100%; height:250px; background:linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); display:flex; align-items:center; justify-content:center; color:#333; font-size:1.8rem; font-weight:600;">Digital Leap Africa</div>
         <div class="card-overlay">
           <div class="tech-stack">
             <span class="tech-tag">Laravel</span>
@@ -851,16 +851,18 @@
         alert('Opening your email client to send the message...');
     });
 
-    // Image loading optimization
+    // Simple image loading
     document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(() => {
-            const images = document.querySelectorAll('.project-card img, .education img');
-            images.forEach(img => {
-                const src = img.src;
-                img.src = '';
-                img.src = src;
+        const images = document.querySelectorAll('.project-card img');
+        images.forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
             });
-        }, 1000);
+            img.addEventListener('error', function() {
+                this.style.opacity = '0.5';
+                console.log('Image failed to load:', this.src);
+            });
+        });
     });
 </script>
 

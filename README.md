@@ -17,6 +17,7 @@ Electrical Engineer and Web Developer with expertise in electrical installations
 
 ## Experience
 
+- **Tutoring - Web Development** - LEA Foundation (2025 - Present)
 - **Electrical Installation & Repair Engineer** - AQUANTUO Shippers Kenya (2025 - Present)
 - **Co-Founder** - Digital Leap Africa (January 2025 - Present)
 - **Freelance Electrical Engineer & Web Developer** (2025 - Present)

@@ -571,7 +571,7 @@
       <div class="image-box">
         <img draggable="false" src="./assets/images/contact1.png" alt="Contact Collins">
       </div>
-    <form id="contact-form">
+    <form id="contact-form" action="mailto:c.otieno@digitalleap.africa" method="post" enctype="text/plain">
       
       <div class="form-group">
         <div class="field">
@@ -783,6 +783,12 @@
             </div>
         `;
         skillsContainer.innerHTML += skillElement;
+    });
+
+    // Simple form submission handler
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        // Form will submit directly to email via mailto
+        alert('Opening your email client to send the message...');
     });
 </script>
 

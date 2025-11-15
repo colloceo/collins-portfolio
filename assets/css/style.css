@@ -465,71 +465,138 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+  padding: 5rem 2rem;
 }
 .skills h2 {
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 3rem;
 }
 .skills .heading span {
-  color: rgb(255, 230, 0);
+  color: #00d4ff;
 }
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
-  color: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 90%;
-  margin: auto;
-  margin-top: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.skills .container .row {
+.skills .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
 }
-.skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
+.skills .skill-category {
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
-.skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: rgba(0, 0, 0, 0.9) !important;
+.skills .skill-category:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
 }
-.skills .container .bar .info {
+.skills .skill-category h3 {
+  color: #00d4ff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.skills .skill-category h3 i {
+  font-size: 2.5rem;
+  color: #00d4ff;
+}
+.skills .skills-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+.skills .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  padding: 1.5rem;
+  background: rgba(10, 10, 10, 0.6);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.skills .container .bar .info i {
-  font-size: 4rem;
+.skills .skill-item:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
 }
-.skills .container .bar .info span {
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: "Poppins";
-  margin-left: 0.5rem;
+.skills .skill-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background: rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
 }
+.skills .skill-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.skills .skill-icon i {
+  font-size: 2.5rem;
+  color: #00d4ff;
+}
+.skills .skill-item:hover .skill-icon {
+  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.1);
+}
+.skills .skill-item span {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.skills .skill-item:hover span {
+  color: #ffffff;
+}
+
 /* skills media queries starts*/
-@media screen and (max-width: 600px) {
-  .skills .container {
-    padding: 0;
-    margin: 0;
+@media screen and (max-width: 768px) {
+  .skills .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
+  .skills .skill-category {
+    padding: 2rem;
+  }
+  .skills .skills-row {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
   }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
+  .skills .skill-item {
+    padding: 1rem;
+  }
+  .skills .skill-category h3 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+  .skills .skills-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills .skill-item span {
+    font-size: 1.2rem;
   }
 }
 /* skills media queries ends*/

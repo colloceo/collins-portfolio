@@ -17,8 +17,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #f7f7f7;
+  background: #0a0a0a;
   font-family: "Poppins", sans-serif;
+  color: #e0e0e0;
 }
 
 *::selection {
@@ -70,8 +71,9 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 section {
   min-height: 100vh;
@@ -79,18 +81,18 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: rgb(32, 32, 32);
+  color: #ffffff;
   font-weight: 800;
   text-align: center;
 }
 .heading span {
-  color: rgb(115, 3, 167);
+  color: #00d4ff;
 }
 header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #0e2431;
+  color: #00d4ff;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -109,7 +111,7 @@ header .navbar li {
 }
 header .navbar ul li a {
   font-size: 1.57rem;
-  color: #0e2431;
+  color: #e0e0e0;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
@@ -117,8 +119,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
-  border-bottom: 0.2rem solid #011aff;
+  color: #00d4ff;
+  border-bottom: 0.2rem solid #00d4ff;
   padding: 0.5rem 0;
 }
 /* navbar ends */
@@ -221,25 +223,25 @@ header .navbar ul li a:hover {
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-.home .content h2 {
+.home .content h1 {
   font-size: 5rem;
   font-weight: 800;
-  color: #002057;
+  color: #ffffff;
 }
-.home .content h2 span {
+.home .content h1 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #ff7b00;
+  color: #00d4ff;
 }
 .home .content p {
   font-size: 2.5rem;
-  color: #000;
+  color: #e0e0e0;
   font-weight: 600;
   padding: 1rem 0;
 }
 .home .content p span {
   font-size: 2.5rem;
-  color: rgb(148, 8, 8);
+  color: #00d4ff;
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -250,9 +252,9 @@ header .navbar ul li a:hover {
   padding: 1.6rem 3rem;
   border-radius: 4em;
   transition: 0.5s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+  color: #0a0a0a;
+  background: #00d4ff;
+  box-shadow: 0px 5px 18px rgba(0, 212, 255, 0.4);
   font-family: "Nunito", sans-serif;
 }
 .home .btn span {
@@ -266,7 +268,7 @@ header .navbar ul li a:hover {
   transition: 0.3s;
 }
 .home .btn:hover {
-  background: #1a047e;
+  background: #0099cc;
 }
 .home .btn:hover i {
   transform: translateX(5px);
@@ -346,7 +348,7 @@ header .navbar ul li a:hover {
 
 /* about section starts */
 .about {
-  background: rgb(255, 255, 255);
+  background: #111111;
 }
 .about .row {
   display: flex;
@@ -377,12 +379,12 @@ header .navbar ul li a:hover {
   padding: 3rem;
 }
 .about .row .content h3 {
-  color: rgb(27, 27, 27);
+  color: #ffffff;
   font-size: 2.5rem;
 }
 .about .row .content .tag {
   font-size: 1.4rem;
-  color: #020133;
+  color: #00d4ff;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -392,6 +394,7 @@ header .navbar ul li a:hover {
   font-family: "Nunito";
   font-weight: 600;
   text-transform: none;
+  color: #e0e0e0;
 }
 .about .row .content .box-container {
   display: flex;
@@ -404,7 +407,7 @@ header .navbar ul li a:hover {
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
-  color: #011aff;
+  color: #00d4ff;
 }
 .resumebtn {
   margin-top: 6rem;
@@ -413,9 +416,9 @@ header .navbar ul li a:hover {
   padding: 1.7rem 3rem;
   border-radius: 0.5em;
   transition: 0.3s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  color: #0a0a0a;
+  background: #00d4ff;
+  box-shadow: 0px 5px 10px rgba(0, 212, 255, 0.4);
   font-family: "Nunito", sans-serif;
 }
 .resumebtn .btn span {
@@ -429,7 +432,7 @@ header .navbar ul li a:hover {
   transition: 0.3s;
 }
 .resumebtn .btn:hover {
-  background: #1a047e;
+  background: #0099cc;
 }
 .resumebtn .btn:hover i {
   transform: translateX(5px);
@@ -461,7 +464,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
 }
 .skills h2 {
   color: #fff;
@@ -534,7 +537,7 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background: #111111;
   min-height: 80vh;
 }
 .education .qoute {
@@ -556,13 +559,14 @@ header .navbar ul li a:hover {
   flex-direction: row;
   width: 80%;
   border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 212, 255, 0.2);
   text-align: center;
   position: relative;
   margin-top: 2rem;
   overflow: hidden;
   transition: 0.3s;
-  background: rgb(252, 252, 252);
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 .education .box-container .box:hover {
   transform: scale(1.03);
@@ -588,7 +592,7 @@ header .navbar ul li a:hover {
 }
 .education .box-container .box .content h3 {
   font-size: 2.5rem;
-  color: #012970;
+  color: #00d4ff;
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
@@ -598,10 +602,11 @@ header .navbar ul li a:hover {
   font-size: 1.5rem;
   margin-left: 1rem;
   text-align: left;
+  color: #e0e0e0;
 }
 .education h4 {
   font-size: 2rem;
-  color: rgb(34, 109, 0);
+  color: #00d4ff;
   text-align: left;
   margin: 1rem;
   font-family: "Nunito", sans-serif;
@@ -641,16 +646,16 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .work {
-  background: #f8f9fa;
+  background: #0a0a0a;
   padding: 5rem 2rem;
 }
 .work h2 {
-  color: #2c3e50;
+  color: #ffffff;
   padding: 2rem 0;
   text-align: center;
 }
 .work .heading span {
-  color: #3498db;
+  color: #00d4ff;
 }
 
 .work .box-container {
@@ -662,10 +667,11 @@ header .navbar ul li a:hover {
 }
 
 .work .box-container .box {
-  background: #fff;
+  background: #1a1a1a;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.3);
   transition: all 0.3s ease;
   height: auto;
   display: flex;
@@ -690,7 +696,7 @@ header .navbar ul li a:hover {
 
 .work .box-container .box .content {
   padding: 2rem;
-  background: #fff;
+  background: #1a1a1a;
   position: relative;
   height: auto;
   width: 100%;
@@ -707,9 +713,9 @@ header .navbar ul li a:hover {
   height: auto;
 }
 
-.work .box-container .box .content .tag h3 {
+.work .box-container .box .content h3 {
   font-size: 2rem;
-  color: #2c3e50;
+  color: #00d4ff;
   font-weight: 700;
   margin: 0;
   text-shadow: none;
@@ -722,9 +728,9 @@ header .navbar ul li a:hover {
   flex-grow: 1;
 }
 
-.work .desc p {
+.work .box-container .box .content p {
   font-size: 1.4rem;
-  color: #666;
+  color: #e0e0e0;
   line-height: 1.6;
   margin-bottom: 2rem;
   text-shadow: none;
@@ -739,13 +745,13 @@ header .navbar ul li a:hover {
   flex-wrap: wrap;
 }
 
-.work .desc .btns .btn {
+.work .box-container .box .content .btns .btn {
   padding: 1rem 2rem;
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #0a0a0a;
+  background: #00d4ff;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -753,13 +759,13 @@ header .navbar ul li a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-right: 0;
+  margin-right: 1rem;
 }
 
-.work .desc .btns .btn:hover {
-  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+.work .box-container .box .content .btns .btn:hover {
+  background: #0099cc;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
 }
 
 .project-card {
@@ -1076,9 +1082,9 @@ header .navbar ul li a:hover {
   padding: 1.6rem 3rem;
   border-radius: 0.5em;
   transition: 0.5s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  color: #0a0a0a;
+  background: #00d4ff;
+  box-shadow: 0px 5px 10px rgba(0, 212, 255, 0.4);
   text-align: center;
 }
 .morebtn .btn span {
@@ -1092,7 +1098,7 @@ header .navbar ul li a:hover {
   transition: 0.3s;
 }
 .morebtn .btn:hover {
-  background: #1a047e;
+  background: #0099cc;
 }
 .morebtn .btn:hover i {
   transform: translateX(5px);
@@ -1141,16 +1147,17 @@ header .navbar ul li a:hover {
 
 /* contact section starts */
 .contact {
-  background: #e5ecfb;
+  background: #111111;
   min-height: 60vh;
 }
 .contact .container {
   max-width: 1050px;
   width: 100%;
-  background: #fff;
+  background: #1a1a1a;
   border-radius: 1.5rem;
   margin: 2rem 5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 .contact .container .content {
   display: flex;
@@ -1201,21 +1208,22 @@ form .message textarea {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: #0a0a0a;
+  color: #e0e0e0;
 }
 .field input::placeholder,
 .message textarea::placeholder {
-  color: rgb(51, 51, 51);
+  color: #888;
 }
 .field input:focus,
 .message textarea:focus {
   padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
+  border: 2px solid #00d4ff;
 }
 .field input:focus ~ i,
 .message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
+  color: #00d4ff;
 }
 form .message {
   position: relative;
@@ -1243,20 +1251,20 @@ form .button-area {
   flex-direction: row-reverse;
 }
 .button-area button {
-  color: #fff;
+  color: #0a0a0a;
   border: none;
   outline: none;
   font-size: 1.8rem;
   cursor: pointer;
   border-radius: 5px;
   padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: #00d4ff;
+  box-shadow: 0px 5px 10px rgba(0, 212, 255, 0.4);
   transition: 0.3s ease;
   font-family: "Nunito", sans-serif;
 }
 .button-area button:hover {
-  background: #421cecf5;
+  background: #0099cc;
 }
 .button-area span {
   font-size: 17px;
@@ -1300,7 +1308,7 @@ form .button-area {
 .footer {
   min-height: auto;
   padding-top: 0;
-  background: rgb(0, 1, 43);
+  background: #000000;
 }
 .footer .box-container {
   display: flex;
@@ -1422,8 +1430,8 @@ form .button-area {
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #ffae00;
-  color: rgb(13, 0, 44);
+  background: #00d4ff;
+  color: #0a0a0a;
   border-radius: 50%;
   transition: 1s linear;
   z-index: 1000;

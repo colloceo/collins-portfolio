@@ -790,6 +790,19 @@
         // Form will submit directly to email via mailto
         alert('Opening your email client to send the message...');
     });
+
+    // Image error handling for better fallback
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('error', function() {
+                if (!this.dataset.fallbackUsed) {
+                    this.dataset.fallbackUsed = 'true';
+                    this.src = 'https://via.placeholder.com/400x250/333/555?text=Image+Not+Available';
+                }
+            });
+        });
+    });
 </script>
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->

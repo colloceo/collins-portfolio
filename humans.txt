@@ -1,0 +1,27 @@
+/* TEAM */
+Developer: Collins Otieno
+Contact: c.otieno@digitalleap.africa
+Phone: +254768581254
+Location: Nairobi, Kenya
+LinkedIn: https://www.linkedin.com/in/collins-otieno-450131362
+GitHub: https://github.com/colloceo
+Twitter: https://x.com/collooceo
+
+/* SITE */
+Last update: 2025/01/27
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code
+Technologies: Laravel, PHP, MySQL, JavaScript, HTML, CSS, Bootstrap
+Specialties: Full Stack Development, Electrical Engineering, Solar Installation
+
+/* PROJECTS */
+Digital Leap Africa: https://digitalleap.africa/
+News254: https://news254.co.ke
+MaliMall: https://juuakali.ct.ws
+UniExamHelper: https://lambent-caramel-4f9e54.netlify.app/
+Zynk Social Media: https://wantam.2kool4u.net
+Snakes & Ladders Game: https://colloceo.github.io/snakes/
+
+Collins Otieno - Full Stack Developer & Electrical Engineer
+Nairobi, Kenya | Laravel | PHP | MySQL | Solar Installation

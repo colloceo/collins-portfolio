@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Collins Otieno",
+  "jobTitle": ["Full Stack Developer", "Electrical Engineer"],
+  "description": "Full-Stack Web Developer and NITA-certified Electrical Engineer specializing in Laravel, PHP, MySQL, solar installations, and electrical systems.",
+  "url": "https://otieno.digitalleap.africa",
+  "image": "https://otieno.digitalleap.africa/assets/images/profile.jpg",
+  "email": "c.otieno@digitalleap.africa",
+  "telephone": "+254768581254",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "Kenya"
+  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "The Technical University of Kenya",
+      "description": "Bachelor of Technology in Communication and Computer Networks"
+    },
+    {
+      "@type": "EducationalOrganization", 
+      "name": "St. Kizito Vocational Training Institute",
+      "description": "Artisan in Electrical Engineering"
+    }
+  ],
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "Digital Leap Africa",
+      "description": "Co-founder of learning and career platform for African youth"
+    },
+    {
+      "@type": "Organization",
+      "name": "AQUANTUO Shippers Kenya",
+      "description": "Electrical Installation & Repair Engineer"
+    }
+  ],
+  "knowsAbout": [
+    "Laravel", "PHP", "MySQL", "JavaScript", "HTML", "CSS", "Bootstrap",
+    "Electrical Engineering", "Solar Installation", "Motor Repairs",
+    "Web Development", "Full Stack Development", "M-Pesa Integration"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/collins-otieno-450131362",
+    "https://github.com/colloceo",
+    "https://x.com/collooceo",
+    "https://t.me/Colloceo",
+    "https://www.instagram.com/colloceo"
+  ]
+}

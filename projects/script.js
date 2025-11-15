@@ -39,16 +39,6 @@ function loadProjects() {
             projects.forEach(project => {
                 html += `
                 <div class="project-card ${project.category}">
-                    <div class="card-image">
-                        <img src="${project.image}" alt="${project.name}" />
-                        <div class="card-overlay">
-                            <div class="tech-stack">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Laravel</span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card-content">
                         <div class="project-header">
                             <h3>${project.name}</h3>

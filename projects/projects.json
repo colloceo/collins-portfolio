@@ -2,7 +2,6 @@
   {
     "name": "News254 – Laravel News Platform",
     "desc": "A modern, fully-featured news management system built with Laravel. Features include mobile-responsive design, advanced SEO, social sharing, WebP optimization, and dark mode interface.",
-    "image": "../assets/images/news254.png",
     "category": "webapp",
     "links": {
       "view": "https://news254.co.ke",
@@ -12,7 +11,6 @@
   {
     "name": "MaliMall — Kenyan Artisan E-Commerce Platform",
     "desc": "MaliMall is a PHP–MySQL e-commerce platform designed to help Kenyan artisans showcase and sell handcrafted products. Features user and artisan accounts, product uploads with admin approval, responsive Bootstrap interface, secure M-Pesa payments, shopping cart functionality, and order tracking.",
-    "image": "../assets/images/malimall.png",
     "category": "webapp",
     "links": {
       "view": "https://juuakali.ct.ws",
@@ -22,7 +20,6 @@
   {
     "name": "Zynk — Social Media Platform",
     "desc": "Zynk is a Twitter-style social media platform built with PHP, MySQL, JavaScript, and CSS. It lets users create accounts, post text and images, like and comment on posts, search content, and view trending hashtags. Features light/dark themes, infinite scrolling, cached trending topics, real-time interaction via AJAX, and a fully responsive interface.",
-    "image": "../assets/images/zynk.png",
     "category": "webapp",
     "links": {
       "view": "https://wantam.2kool4u.net",
@@ -32,7 +29,6 @@
   {
     "name": "UniExamHelper — AI-Powered Exam Assistant",
     "desc": "UniExamHelper is a modern web application that helps university students solve exam questions using AI. Students can upload images, PDFs, documents, or type questions directly into a chat-style interface and receive detailed, step-by-step answers powered by Groq's Llama 3.1 model.",
-    "image": "../assets/images/uniexamhelper.png",
     "category": "webapp",
     "links": {
       "view": "https://lambent-caramel-4f9e54.netlify.app/",
@@ -42,7 +38,6 @@
   {
     "name": "Snakes & Ladders — Web Game",
     "desc": "A modern, web-based Snakes & Ladders game built with HTML, CSS, and JavaScript. It features smooth animations, dice-roll effects, a real-time game log, mobile-responsive design, and two game modes—play with a friend or against the computer.",
-    "image": "../assets/images/snakes&ladders.png",
     "category": "webapp",
     "links": {
       "view": "https://colloceo.github.io/snakes/",
@@ -52,7 +47,6 @@
   {
     "name": "Digital Leap Africa — Live Learning & Career Platform",
     "desc": "A Laravel & MySQL LMS empowering African youth with expert-led courses, career opportunities, real-world projects, and community engagement. Features include certifications, gamification, job board, forum, digital library, and a full admin CMS.",
-    "image": "../assets/images/digitalleap.png",
     "category": "webapp",
     "links": {
       "view": "https://digitalleap.africa/",

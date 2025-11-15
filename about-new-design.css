@@ -1,0 +1,229 @@
+/* New About Section Design */
+.about {
+  background: #0a0a0a;
+  padding: 6rem 2rem;
+}
+
+.about .about-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about .about-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about .hero-content {
+  display: inline-block;
+}
+
+.about .profile-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+}
+
+.about .profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about .avatar-border {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #00d4ff;
+  border-radius: 50%;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.about .hero-content h3 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about .tagline {
+  color: #00d4ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about .location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 212, 255, 0.1);
+  color: #00d4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.about .about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about .info-card {
+  background: #1a1a1a;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about .info-card:hover {
+  border-color: #00d4ff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+}
+
+.about .card-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.about .card-icon i {
+  color: #00d4ff;
+  font-size: 2rem;
+}
+
+.about .info-card h4 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about .info-card p {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+  text-transform: none;
+}
+
+.about .tech-stack {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about .tech-stack h4 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about .tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about .tech-item {
+  background: rgba(0, 212, 255, 0.1);
+  color: #00d4ff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about .tech-item:hover {
+  background: #00d4ff;
+  color: #0a0a0a;
+}
+
+.about .contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about .action-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.about .action-btn.primary {
+  background: #00d4ff;
+  color: #0a0a0a;
+}
+
+.about .action-btn.primary:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+}
+
+.about .action-btn.secondary {
+  background: transparent;
+  color: #00d4ff;
+  border-color: #00d4ff;
+}
+
+.about .action-btn.secondary:hover {
+  background: #00d4ff;
+  color: #0a0a0a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+  
+  .about .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .about .hero-content h3 {
+    font-size: 2rem;
+  }
+  
+  .about .contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about .action-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}

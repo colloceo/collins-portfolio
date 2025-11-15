@@ -1,0 +1,228 @@
+/* About Section Redesign */
+.about .about-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.about .hero-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.about .profile-avatar {
+    position: relative;
+}
+
+.about .profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.about .hero-info h3 {
+    font-size: 2rem;
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+}
+
+.about .hero-title {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.about .hero-location {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.about .hero-location i {
+    color: #00d4ff;
+    margin-right: 0.5rem;
+}
+
+.about .hero-contact {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.about .hero-contact i {
+    color: #00d4ff;
+    margin-right: 0.5rem;
+}
+
+.about .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about .info-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.about .info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.about .card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.about .card-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.about .info-card h4 {
+    font-size: 1.3rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.about .info-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.about .tech-stack {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about .tech-stack h4 {
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+}
+
+.about .tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about .tech-badge {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.about .tech-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.about .about-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.about .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.about .action-btn.primary {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #fff;
+}
+
+.about .action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.about .action-btn.secondary {
+    background: transparent;
+    color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+.about .action-btn.secondary:hover {
+    background: #00d4ff;
+    color: #0a0a0a;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about .hero-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .about .profile-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .about .hero-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about .tech-badges {
+        gap: 0.5rem;
+    }
+    
+    .about .tech-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .about .about-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about .action-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}

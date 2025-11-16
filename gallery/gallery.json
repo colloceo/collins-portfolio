@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nation Media Hackathon 2025",
+    "description": "Participated in Nation Media Group's premier hackathon focused on 'Reimagining Media through Technology.' Developed innovative solutions addressing real-world challenges in journalism and media industry including immersive storytelling, multi-platform content delivery, personalized news experiences, interactive data visualization, new revenue models, and audience engagement strategies. Demonstrated MediaTech & prototyping skills with working solutions for commercial journalism challenges.",
+    "images": ["images/nation_center1.jpg", "images/nation_center2.jpg"],
+    "category": "events",
+    "date": "May 2025",
+    "location": "Nation Centre, Nairobi",
+    "achievements": "Developed MediaTech prototype, applied AI in newsrooms, demonstrated audience retention solutions"
+  },
+  {
+    "title": "AI Hackathon at ABC Place 2025",
+    "description": "Competed in Kenya's major national AI competition focusing on 'Ethical and Responsible AI' for high-impact sectors. Developed AI solutions addressing governance and compliance, risk management, threat detection & prevention, and leveraging Generative/Agentic AI for localized solutions in FinTech, Public Policy, and Sustainable Development. Emphasized transparency, explainability, fairness, and preventing bias in AI systems.",
+    "images": ["images/ai_hackathon1.jpg", "images/ai_hackathon2.jpg"],
+    "category": "events",
+    "date": "October 2025",
+    "location": "ABC Place, Nairobi",
+    "achievements": "Built ethical AI system for financial fraud detection with model fairness and transparency"
+  },
+  {
+    "title": "Code Africa 2025",
+    "description": "Attended Africa's premier software development conference focusing on emerging technologies and ecosystem growth across the continent. Participated in workshops covering Blockchain and Web3, AI/Machine Learning, IoT, Big Data, DevOps, and Cybersecurity. The event emphasized driving African contributions to the global tech landscape and connecting with founders, VCs, and industry pioneers across Africa.",
+    "images": ["images/code_africa1.jpg", "images/code_africa2.jpg"],
+    "category": "events",
+    "date": "May 19-23, 2025",
+    "location": "Sarit Center, Nairobi",
+    "achievements": "Gained Web3 fundamentals, Big Data solutions expertise, networked with African tech ecosystem"
+  },
+  {
+    "title": "TEMS Africa Expo 2025",
+    "description": "Participated in Africa's premier ICT Exhibition and Conference focusing on Information and Communication Technology for African growth and transformation. Explored B2B solutions in 5G and Wireless Communication, Cloud Computing, Cybersecurity, E-Government/E-Commerce, IoT, and Digital Transformation across Banking, Healthcare, and Government sectors. Gained insights into commercial and policy aspects of technology.",
+    "images": ["images/tems_africa1.jpg", "images/tems_africa2.jpg"],
+    "category": "events",
+    "date": "April 23-24, 2025",
+    "location": "Sarit Expo Centre, Nairobi",
+    "achievements": "Learned enterprise-level solutions, understood ICT's role in national development, gained strategic tech perspective"
+  }
+]

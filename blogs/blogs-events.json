@@ -1,0 +1,44 @@
+[
+  {
+    "type": "blog",
+    "title": "Getting Started with Laravel Development",
+    "date": "January 15, 2025",
+    "description": "A comprehensive guide to starting your journey with Laravel framework. Learn the basics of MVC architecture, routing, and building your first Laravel application.",
+    "link": "#"
+  },
+  {
+    "type": "event",
+    "title": "Digital Leap Africa Launch Event",
+    "date": "January 10, 2025",
+    "description": "Join us for the official launch of Digital Leap Africa - empowering African youth through technology education and career opportunities.",
+    "link": "https://digitalleap.africa"
+  },
+  {
+    "type": "blog",
+    "title": "Building Responsive Web Applications",
+    "date": "December 20, 2024",
+    "description": "Learn how to create mobile-first, responsive web applications using modern CSS techniques and frameworks like Bootstrap.",
+    "link": "#"
+  },
+  {
+    "type": "event",
+    "title": "Web Development Workshop - Mukuru Slums",
+    "date": "December 15, 2024",
+    "description": "Voluntary web development tutoring session at Mukuru Slums Development Project in partnership with LEA Foundation.",
+    "link": "#"
+  },
+  {
+    "type": "blog",
+    "title": "Solar Energy Systems Installation Guide",
+    "date": "November 30, 2024",
+    "description": "A practical guide to solar panel installation, wiring, and system optimization for residential and commercial applications.",
+    "link": "#"
+  },
+  {
+    "type": "event",
+    "title": "Tech Meetup - Nairobi Developers",
+    "date": "November 25, 2024",
+    "description": "Networking event for developers in Nairobi. Discussing latest trends in web development and electrical engineering innovations.",
+    "link": "#"
+  }
+]

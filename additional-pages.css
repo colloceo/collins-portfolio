@@ -1,0 +1,113 @@
+/* Additional Pages Section */
+.additional-pages {
+    padding: 5rem 9% 2rem;
+    background: #0a0a0a;
+}
+
+.additional-pages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.additional-pages .page-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.additional-pages .page-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.additional-pages .page-card:hover {
+    transform: translateY(-1rem);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 2rem 4rem rgba(0, 212, 255, 0.1);
+}
+
+.additional-pages .page-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+}
+
+.additional-pages .page-icon i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.additional-pages .page-card h3 {
+    font-size: 2.2rem;
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+}
+
+.additional-pages .page-card p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.additional-pages .page-card .btn {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.additional-pages .page-card .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 212, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .additional-pages {
+        padding: 3rem 3% 2rem;
+    }
+    
+    .additional-pages .page-links {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .additional-pages .page-card {
+        padding: 2rem;
+    }
+    
+    .additional-pages .page-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .additional-pages .page-icon i {
+        font-size: 2rem;
+    }
+    
+    .additional-pages .page-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .additional-pages .page-card p {
+        font-size: 1.4rem;
+    }
+}

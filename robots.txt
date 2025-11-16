@@ -4,21 +4,28 @@ Allow: /
 # Sitemap
 Sitemap: https://otieno.digitalleap.africa/sitemap.xml
 
-# Crawl-delay
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl-delay for better server performance
 Crawl-delay: 1
 
-# Disallow specific paths (if any)
-# Disallow: /admin/
-# Disallow: /private/
+# Disallow certain file types if needed
+Disallow: /*.json$
+Disallow: /assets/js/
+Disallow: /assets/css/
 
-# Allow important resources
-Allow: /assets/
-Allow: /projects/
-Allow: /*.css
-Allow: /*.js
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.jpeg
-Allow: /*.gif
-Allow: /*.webp
-Allow: /*.svg
+# Allow important directories
+Allow: /gallery/
+Allow: /blogs/
+Allow: /assets/images/

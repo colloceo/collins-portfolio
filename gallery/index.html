@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Gallery | Collins Otieno - Tech Events & Projects Photos">
+    <meta name="description" content="Explore Collins Otieno's gallery featuring photos from major tech events including Nation Media Hackathon 2025, AI Hackathon at ABC Place, Code Africa 2025, and TEMS Africa Expo. View electrical projects and professional work.">
+    <meta name="author" content="Collins Otieno">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Collins Otieno Gallery, Collins Otieno Events, Nation Media Hackathon 2025, AI Hackathon ABC Place, Code Africa 2025, TEMS Africa Expo, Collins Otieno Photos, Tech Events Kenya, Hackathon Photos Nairobi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otieno.digitalleap.africa/gallery/">
+    <meta property="og:title" content="Gallery | Collins Otieno - Tech Events & Projects Photos">
+    <meta property="og:description" content="Explore Collins Otieno's gallery featuring photos from major tech events and professional projects in Kenya.">
+    <meta property="og:image" content="https://otieno.digitalleap.africa/assets/images/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://otieno.digitalleap.africa/gallery/">
+    <meta property="twitter:title" content="Gallery | Collins Otieno - Tech Events Photos">
+    <meta property="twitter:description" content="View photos from major tech events and professional projects by Collins Otieno.">
+    <meta property="twitter:image" content="https://otieno.digitalleap.africa/assets/images/profile.jpg">
+    
+    <link rel="canonical" href="https://otieno.digitalleap.africa/gallery/">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-png">
+    <title>Gallery | Collins Otieno - Tech Events & Projects Photos</title>
+</head>
+<body>
+
+<!-- navbar starts -->
+<header>
+    <a href="../index.html" class="logo">Collins</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../blogs/index.html">Blogs</a>
+        <a href="#" class="active">Gallery</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- gallery section starts -->
+<section class="gallery">
+    <h2 class="heading"><i class="fas fa-images"></i> My <span>Gallery</span></h2>
+    
+    <div class="button-group">
+        <button class="btn is-checked" data-filter="*">All</button>
+        <button class="btn" data-filter=".events">Events</button>
+        <button class="btn" data-filter=".workshops">Workshops</button>
+        <button class="btn" data-filter=".electrical">Electrical</button>
+        <button class="btn" data-filter=".professional">Professional</button>
+    </div>
+
+    <div class="gallery-container">
+        <!-- Gallery items will be loaded dynamically -->
+    </div>
+
+    <div class="backbtn">
+        <a href="../index.html" class="btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+</section>
+<!-- gallery section ends -->
+
+<!-- Modal for image preview -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="caption" id="caption"></div>
+</div>
+
+<!-- scroll top btn -->
+<a href="#gallery" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

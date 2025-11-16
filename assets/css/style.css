@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+/* Fonts loaded via preload in HTML */
 
 * {
   margin: 0;
@@ -1353,10 +1352,10 @@ header .navbar ul li a:hover {
   margin-bottom: 0.8rem;
 }
 .experience .duration {
-  color: #888;
+  color: #bbb;
   font-size: 1.4rem;
   font-weight: 500;
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.15);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   display: inline-block;

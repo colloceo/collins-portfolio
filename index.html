@@ -7,7 +7,7 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="./assets/css/style.css" as="style">
-    <link rel="preload" href="./assets/images/hero.png" as="image">
+    <link rel="preload" href="./assets/images/hero.png" as="image" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -189,7 +189,10 @@
       </div>
     </div>
 <div class="image">
-     <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Collins Otieno - Full Stack Developer & Electrical Engineer Nairobi Kenya" width="264" height="452">
+     <picture>
+        <source srcset="./assets/images/hero.webp" type="image/webp">
+        <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Collins Otieno - Full Stack Developer & Electrical Engineer Nairobi Kenya" width="264" height="452" fetchpriority="high">
+    </picture>
 </div>
 </section>
 <!-- hero section ends -->
@@ -865,7 +868,7 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- scroll reveal anim -->
-<script defer src="https://unpkg.com/scrollreveal"></script>
+<script defer src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 

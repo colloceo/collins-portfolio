@@ -183,7 +183,7 @@
       </div>
     </div>
 <div class="image">
-     <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Collins Otieno - Full Stack Developer & Electrical Engineer Nairobi Kenya" width="400" height="400">
+     <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Collins Otieno - Full Stack Developer & Electrical Engineer Nairobi Kenya" width="457" height="452">
 </div>
 </section>
 <!-- hero section ends -->
@@ -343,7 +343,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-icon">
-                            <img src="https://img.icons8.com/color/48/000000/qt.png" alt="PyQt">
+                            <i class="fab fa-python"></i>
                         </div>
                         <span>PyQt</span>
                     </div>
@@ -923,11 +923,15 @@
     };
 
     // Populate Professional Summary
-    document.getElementById("professionalSummary").innerText = cvData.professionalSummary;
+    const professionalSummaryEl = document.getElementById("professionalSummary");
+    if (professionalSummaryEl) {
+        professionalSummaryEl.innerText = cvData.professionalSummary;
+    }
 
     // Populate Education
     const educationContainer = document.getElementById("educationContainer");
-    cvData.education.forEach((edu) => {
+    if (educationContainer) {
+        cvData.education.forEach((edu) => {
         const educationElement = `
             <div class="box">
                 <div class="content">
@@ -939,12 +943,14 @@
                 </div>
             </div>
         `;
-        educationContainer.innerHTML += educationElement;
-    });
+            educationContainer.innerHTML += educationElement;
+        });
+    }
 
     // Populate Work Experience
     const workContainer = document.getElementById("workContainer");
-    cvData.workExperience.forEach((work) => {
+    if (workContainer) {
+        cvData.workExperience.forEach((work) => {
         const workElement = `
             <div class="box tilt">
                 <div class="content">
@@ -961,12 +967,14 @@
                 </div>
             </div>
         `;
-        workContainer.innerHTML += workElement;
-    });
+            workContainer.innerHTML += workElement;
+        });
+    }
 
     // Populate Skills
     const skillsContainer = document.getElementById("skillsContainer");
-    cvData.skills.forEach((skill) => {
+    if (skillsContainer) {
+        cvData.skills.forEach((skill) => {
         const skillElement = `
             <div class="bar">
                 <div class="info">
@@ -974,14 +982,18 @@
                 </div>
             </div>
         `;
-        skillsContainer.innerHTML += skillElement;
-    });
+            skillsContainer.innerHTML += skillElement;
+        });
+    }
 
     // Simple form submission handler
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        // Form will submit directly to email via mailto
-        alert('Opening your email client to send the message...');
-    });
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Form will submit directly to email via mailto
+            alert('Opening your email client to send the message...');
+        });
+    }
 
     // Simple image loading
     document.addEventListener('DOMContentLoaded', function() {

@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && ./node_modules/.bin/vite build"
+  command = "npm ci && node ./node_modules/vite/bin/vite.js build"
   publish = "dist"
 
 # SPA routing — redirect all routes to index.html

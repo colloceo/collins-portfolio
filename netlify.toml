@@ -1,5 +1,5 @@
 [build]
-  command = "npx vite build"
+  command = "npm install && ./node_modules/.bin/vite build"
   publish = "dist"
 
 # SPA routing — redirect all routes to index.html

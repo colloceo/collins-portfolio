@@ -110,10 +110,10 @@ const Education = () => {
                                 rel="noreferrer"
                                 className="cert-card"
                                 style={{ textDecoration: "none", color: "inherit" }}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
+                                viewport={{ once: true, margin: "-20px" }}
+                                transition={{ delay: i * 0.05, duration: 0.4 }}
                             >
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
                                     <Icon icon="lucide:award" width={20} style={{ color: "var(--accent)" }} />

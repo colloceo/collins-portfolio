@@ -44,16 +44,6 @@ export const portfolioData = {
                 style: { color: "#02569B" },
             },
             {
-                skillName: "Laravel",
-                fontAwesomeClassname: "simple-icons:laravel",
-                style: { color: "#FF2D20" },
-            },
-            {
-                skillName: "PHP",
-                fontAwesomeClassname: "simple-icons:php",
-                style: { color: "#777BB4" },
-            },
-            {
                 skillName: "MySQL",
                 fontAwesomeClassname: "simple-icons:mysql",
                 style: { color: "#4479A1" },

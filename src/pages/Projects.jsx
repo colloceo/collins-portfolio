@@ -28,7 +28,7 @@ const Projects = () => {
                 </motion.div>
             </div>
 
-            <div className="main-container" style={{ paddingTop: "3rem" }}>
+            <div className="main-container page-content">
                 <motion.div
                     initial="hidden"
                     animate="visible"

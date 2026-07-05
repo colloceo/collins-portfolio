@@ -705,6 +705,25 @@ body {
     border-color: var(--accent);
 }
 
+/* ── Page content top spacing ── */
+.page-content {
+    padding-top: 3rem;
+}
+
+/* ── Experience blurb box ── */
+.exp-blurb {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.exp-blurb p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
 /* ── Gallery ── */
 .gallery-info {
     padding: 2rem;
@@ -873,6 +892,12 @@ body {
     .card-header { flex-wrap: wrap; gap: 1rem; }
     .card-date { margin-left: 0; text-align: left; }
 
+    /* Page content spacing */
+    .page-content { padding-top: 2rem; }
+
+    /* Experience blurb */
+    .exp-blurb { padding: 1.5rem; }
+
     /* Section headings */
     .section-heading-row {
         flex-direction: column;
@@ -960,6 +985,12 @@ body {
     .card-title h2 { font-size: 1rem; }
     .card-title h3 { font-size: 0.88rem; }
     .card-icon { width: 40px; height: 40px; }
+
+    /* Page content spacing */
+    .page-content { padding-top: 1.5rem; }
+
+    /* Experience blurb */
+    .exp-blurb { padding: 1.25rem; margin-top: 1.5rem; }
 
     /* Page banner */
     .page-banner { padding: 2.5rem 1rem 1.5rem; }

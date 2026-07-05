@@ -27,7 +27,7 @@ const Gallery = () => {
                 </motion.div>
             </div>
 
-            <div className="main-container" style={{ paddingTop: "3rem" }}>
+            <div className="main-container page-content">
 
                 {/* Filter pills */}
                 <motion.div

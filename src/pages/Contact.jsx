@@ -55,7 +55,7 @@ const Contact = () => {
                 </motion.div>
             </div>
 
-            <div className="main-container" style={{ paddingTop: "3rem" }}>
+            <div className="main-container page-content">
                 <motion.div
                     className="contact-wrapper"
                     initial={{ opacity: 0, y: 40 }}

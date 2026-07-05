@@ -28,7 +28,7 @@ const Experience = () => {
                 </motion.div>
             </div>
 
-            <div className="main-container" style={{ paddingTop: "3rem" }}>
+            <div className="main-container page-content">
                 {data.experience.sections.map((section, si) => (
                     <motion.div
                         key={si}
@@ -79,20 +79,12 @@ const Experience = () => {
 
                 {/* Description blurb */}
                 <motion.div
+                    className="exp-blurb"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{
-                        marginTop: "2rem",
-                        padding: "2rem",
-                        background: "var(--bg-card)",
-                        borderRadius: "var(--radius-md)",
-                        border: "1px solid var(--border)",
-                    }}
                 >
-                    <p style={{ color: "var(--text-muted)", lineHeight: "1.7" }}>
-                        {data.experience.description}
-                    </p>
+                    <p>{data.experience.description}</p>
                 </motion.div>
             </div>
         </div>

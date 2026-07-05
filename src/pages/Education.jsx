@@ -103,24 +103,20 @@ const Education = () => {
 
                     <div className="cert-grid">
                         {data.certifications.map((cert, i) => (
-                            <motion.a
+                            <a
                                 key={i}
                                 href={cert.certificate_link}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="cert-card"
                                 style={{ textDecoration: "none", color: "inherit" }}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-20px" }}
-                                transition={{ delay: i * 0.05, duration: 0.4 }}
                             >
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
                                     <Icon icon="lucide:award" width={20} style={{ color: "var(--accent)" }} />
                                     <h3>{cert.title}</h3>
                                 </div>
                                 <p>{cert.subtitle}</p>
-                            </motion.a>
+                            </a>
                         ))}
                     </div>
                 </motion.div>

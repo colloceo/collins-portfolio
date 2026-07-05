@@ -924,7 +924,15 @@ body {
     .page-banner h1 { font-size: 2.4rem; }
 
     /* Cert grid */
-    .cert-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Disable hover transforms on cards for mobile */
+    .degree-card:hover,
+    .experience-card:hover,
+    .cert-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
 
     /* Gallery */
     .gallery-grid-2 {
@@ -992,6 +1000,15 @@ body {
     .card-title h2 { font-size: 1rem; }
     .card-title h3 { font-size: 0.88rem; }
     .card-icon { width: 40px; height: 40px; }
+
+    /* Disable all card hover animations on mobile */
+    .degree-card:hover,
+    .experience-card:hover,
+    .cert-card:hover,
+    .repo-card-div:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
 
     /* Page content spacing */
     .page-content { padding-top: 1.5rem; }

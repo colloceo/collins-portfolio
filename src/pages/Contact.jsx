@@ -8,9 +8,9 @@ import { portfolioData as data } from "../data";
 // Replace these three values with your own from
 // https://www.emailjs.com  (free, 200 emails/mo)
 // ─────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID  = "service_jeiwi3x";
+const EMAILJS_TEMPLATE_ID = "template_d5fu38e";
+const EMAILJS_PUBLIC_KEY  = "3g6JOAoH4lxlKgZMp";
 // ─────────────────────────────────────────────
 
 const Contact = () => {

@@ -11,6 +11,9 @@ Options -Indexes
 # real files and directories
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # If hosted at root domain: RewriteBase /
+    # If hosted in a subdirectory e.g. /portfolio/: RewriteBase /portfolio/
     RewriteBase /
 
     # If the request is for a real file, serve it
@@ -94,13 +97,24 @@ Options -Indexes
 
 # ── MIME Types ──
 <IfModule mod_mime.c>
-    AddType application/javascript          .js .mjs
+    AddType application/javascript          .js
+    AddType application/javascript          .mjs
     AddType text/css                        .css
     AddType image/svg+xml                   .svg
     AddType image/webp                      .webp
     AddType font/woff                       .woff
     AddType font/woff2                      .woff2
     AddType application/json               .json
+</IfModule>
+
+# Force correct MIME type for JS (overrides server default)
+<IfModule mod_headers.c>
+    <FilesMatch "\.js$">
+        Header set Content-Type "application/javascript"
+    </FilesMatch>
+    <FilesMatch "\.mjs$">
+        Header set Content-Type "application/javascript"
+    </FilesMatch>
 </IfModule>
 
 # ── Block access to sensitive files ──

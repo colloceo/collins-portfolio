@@ -25,7 +25,7 @@ const Home = () => {
                     variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                 >
                     <motion.span className="section-label" variants={fadeUp}>
-                        React · Python FastAPI · Flutter · Laravel
+                        React · Python FastAPI · Flutter
                     </motion.span>
 
                     <motion.h1 variants={fadeUp}>
@@ -74,7 +74,7 @@ const Home = () => {
                             <div className="stat-label">Projects Built</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-num">2</div>
+                            <div className="stat-num">4</div>
                             <div className="stat-label">Certifications</div>
                         </div>
                     </motion.div>

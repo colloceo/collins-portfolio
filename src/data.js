@@ -6,7 +6,7 @@ export const portfolioData = {
     email: "c.otieno@digitalleap.africa",
     phone: "+254768581254",
     resumeUrl: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link",
-    bio: "I don't just write code; I build scalable systems. Full-Stack Engineer and Co-Founder based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. I specialize in PHP, Laravel, and high-performance architecture, recently handling 17,800+ requests in 24 hours with 100% uptime.",
+    bio: "I don't just write code; I build scalable systems. Full-Stack Engineer and Co-Founder based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. I specialize in Python, FastAPI, and high-performance architecture, recently handling 17,800+ requests in 24 hours with 100% uptime.",
     socials: {
         linkedin: "https://www.linkedin.com/in/collins-otieno-450131362",
         github: "https://github.com/colloceo",
@@ -124,6 +124,24 @@ export const portfolioData = {
             certificate_link: "#",
             alt_name: "ALX",
             color_code: "#1F70C11a"
+        },
+        {
+            title: "ALX Cybersecurity",
+            subtitle: "alx_africa",
+            logo_path: "alx_logo.png",
+            certificate_link: "#",
+            alt_name: "ALX",
+            color_code: "#D83B011a",
+            detail: "Cybersecurity certification covering threat detection, network security, and ethical hacking fundamentals."
+        },
+        {
+            title: "Hack The Box Academy",
+            subtitle: "Hack The Box",
+            logo_path: "htb_logo.png",
+            certificate_link: "#",
+            alt_name: "HTB",
+            color_code: "#9FEF001a",
+            detail: "Hands-on cybersecurity training covering penetration testing, vulnerability exploitation, and offensive security techniques."
         },
         {
             title: "Electrical Wireman",

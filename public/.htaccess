@@ -1,0 +1,110 @@
+# ─────────────────────────────────────────────
+# React SPA — cPanel .htaccess
+# Place this in the public_html (or subdirectory)
+# where your Vite build output (dist/) is uploaded
+# ─────────────────────────────────────────────
+
+Options -Indexes
+
+# ── SPA Routing (critical for React Router) ──
+# Redirect all requests to index.html except
+# real files and directories
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # If the request is for a real file, serve it
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # If the request is for a real directory, serve it
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Otherwise send to index.html
+    RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# ── Compression ──
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ── Browser Caching ──
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML — no cache (always fresh)
+    ExpiresByType text/html                "access plus 0 seconds"
+
+    # CSS & JS — long cache (Vite adds content hash to filenames)
+    ExpiresByType text/css                 "access plus 1 year"
+    ExpiresByType application/javascript   "access plus 1 year"
+
+    # Images
+    ExpiresByType image/png                "access plus 1 year"
+    ExpiresByType image/jpg                "access plus 1 year"
+    ExpiresByType image/jpeg               "access plus 1 year"
+    ExpiresByType image/gif                "access plus 1 year"
+    ExpiresByType image/svg+xml            "access plus 1 year"
+    ExpiresByType image/webp               "access plus 1 year"
+    ExpiresByType image/ico                "access plus 1 year"
+    ExpiresByType image/x-icon             "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff                "access plus 1 year"
+    ExpiresByType font/woff2               "access plus 1 year"
+    ExpiresByType application/font-woff    "access plus 1 year"
+    ExpiresByType application/font-woff2   "access plus 1 year"
+</IfModule>
+
+# ── Cache-Control Headers ──
+<IfModule mod_headers.c>
+    # Never cache HTML (so new deployments take effect immediately)
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Long cache for hashed assets
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|webp|woff|woff2|ico)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # ── Security Headers ──
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+    # CORS for fonts
+    <FilesMatch "\.(woff|woff2|ttf|eot|svg)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# ── MIME Types ──
+<IfModule mod_mime.c>
+    AddType application/javascript          .js .mjs
+    AddType text/css                        .css
+    AddType image/svg+xml                   .svg
+    AddType image/webp                      .webp
+    AddType font/woff                       .woff
+    AddType font/woff2                      .woff2
+    AddType application/json               .json
+</IfModule>
+
+# ── Block access to sensitive files ──
+<FilesMatch "\.(env|log|sh|sql|bak|config)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

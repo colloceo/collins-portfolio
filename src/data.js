@@ -17,21 +17,16 @@ export const portfolioData = {
     },
     greeting: {
         title: "Hi There, I'm Collins Otieno",
-        subTitle: "Full-Stack Engineer & Co-Founder building scalable systems and EdTech platforms for African youth. I specialize in PHP, Laravel, and high-performance server architecture.",
+        subTitle: "Full-Stack Engineer specializing in React, Python FastAPI, and Flutter mobile development. I build scalable systems and EdTech platforms for African youth.",
         resumeLink: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link"
     },
     skills: {
         title: "What I Do",
         softwareSkills: [
             {
-                skillName: "Laravel",
-                fontAwesomeClassname: "simple-icons:laravel",
-                style: { color: "#FF2D20" },
-            },
-            {
-                skillName: "PHP",
-                fontAwesomeClassname: "simple-icons:php",
-                style: { color: "#777BB4" },
+                skillName: "React",
+                fontAwesomeClassname: "simple-icons:react",
+                style: { color: "#61DAFB" },
             },
             {
                 skillName: "Python",
@@ -44,14 +39,24 @@ export const portfolioData = {
                 style: { color: "#009688" },
             },
             {
+                skillName: "Flutter",
+                fontAwesomeClassname: "simple-icons:flutter",
+                style: { color: "#02569B" },
+            },
+            {
+                skillName: "Laravel",
+                fontAwesomeClassname: "simple-icons:laravel",
+                style: { color: "#FF2D20" },
+            },
+            {
+                skillName: "PHP",
+                fontAwesomeClassname: "simple-icons:php",
+                style: { color: "#777BB4" },
+            },
+            {
                 skillName: "MySQL",
                 fontAwesomeClassname: "simple-icons:mysql",
                 style: { color: "#4479A1" },
-            },
-            {
-                skillName: "React",
-                fontAwesomeClassname: "simple-icons:react",
-                style: { color: "#61DAFB" },
             },
             {
                 skillName: "JavaScript",
@@ -75,11 +80,11 @@ export const portfolioData = {
             },
         ],
         skills: [
-            "Building high-performance Laravel backends that handle 17,000+ requests per day with 100% uptime",
-            "Architecting full-stack web platforms with PHP, MySQL, and React frontends",
-            "Building REST APIs with Python and FastAPI for fast, modern backend services",
+            "Building modern, responsive web apps with React and JavaScript",
+            "Developing high-performance REST APIs with Python and FastAPI",
+            "Creating cross-platform mobile apps with Flutter for Android and iOS",
+            "Building robust Laravel backends that handle 17,000+ requests per day with 100% uptime",
             "Implementing custom server security including firewalls, bot protection, and threat blocking",
-            "Optimizing database queries and caching for sub-second page loads under heavy load",
             "Driving organic growth with advanced SEO strategies and technical site optimization",
             "Solar system installation, electrical wiring, and industrial motor repair",
         ]

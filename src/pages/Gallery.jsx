@@ -88,12 +88,12 @@ const Gallery = () => {
                                         key={j}
                                         onClick={() => openLightbox(event.images, j)}
                                         className="gallery-thumb"
-                                        style={{ overflow: "hidden", cursor: "zoom-in", position: "relative" }}
+                                        style={{ overflow: "hidden", cursor: "zoom-in", position: "relative", background: "#0a0a0a" }}
                                     >
                                         <img
                                             src={img}
                                             alt={`${event.title} photo ${j + 1}`}
-                                            style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease", display: "block" }}
+                                            style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", background: "#0a0a0a", transition: "transform 0.4s ease", display: "block" }}
                                             onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.06)"}
                                             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
                                         />

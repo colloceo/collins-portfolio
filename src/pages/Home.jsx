@@ -25,7 +25,7 @@ const Home = () => {
                     variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                 >
                     <motion.span className="section-label" variants={fadeUp}>
-                        Full Stack Engineer &amp; Co-Founder
+                        React · Python FastAPI · Flutter · Laravel
                     </motion.span>
 
                     <motion.h1 variants={fadeUp}>
@@ -53,10 +53,7 @@ const Home = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div
-                        variants={fadeUp}
-                        className="hero-actions"
-                    >
+                    <motion.div variants={fadeUp} className="hero-actions">
                         <a href={data.greeting.resumeLink} target="_blank" rel="noreferrer" className="btn">
                             View Resume
                             <Icon icon="lucide:arrow-right" width={16} />
@@ -67,7 +64,6 @@ const Home = () => {
                         </a>
                     </motion.div>
 
-                    {/* Stats */}
                     <motion.div className="stats-row" variants={fadeUp}>
                         <div className="stat-item">
                             <div className="stat-num">3+</div>
@@ -103,37 +99,12 @@ const Home = () => {
                 transition={{ duration: 0.7 }}
             >
                 <div className="skills-image-div">
-                    <div style={{
-                        position: "relative",
-                        width: "360px",
-                        maxWidth: "100%",
-                    }}>
-                        {/* Orange accent ring */}
-                        <div style={{
-                            position: "absolute",
-                            top: "-12px",
-                            left: "-12px",
-                            right: "12px",
-                            bottom: "12px",
-                            border: "2px solid var(--accent)",
-                            borderRadius: "var(--radius-lg)",
-                            opacity: 0.4,
-                            zIndex: 0,
-                        }} />
+                    <div className="skills-photo-wrap">
+                        <div className="skills-photo-ring" />
                         <img
                             src="/code_africa2.jpg"
                             alt="Collins Otieno at Code Africa 2025"
-                            style={{
-                                width: "100%",
-                                height: "420px",
-                                objectFit: "cover",
-                                objectPosition: "center top",
-                                borderRadius: "var(--radius-lg)",
-                                display: "block",
-                                position: "relative",
-                                zIndex: 1,
-                                boxShadow: "0 30px 60px rgba(0,0,0,0.4)",
-                            }}
+                            className="skills-photo"
                         />
                     </div>
                 </div>
@@ -159,8 +130,12 @@ const Home = () => {
                     <ul className="skill-list">
                         {data.skills.skills.map((skill, i) => (
                             <li key={i}>
-                                <Icon icon="lucide:zap" width={16} style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }} />
-                                {skill.replace(/^⚡\s*/, "")}
+                                <Icon
+                                    icon="lucide:zap"
+                                    width={16}
+                                    style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }}
+                                />
+                                {skill}
                             </li>
                         ))}
                     </ul>

@@ -342,6 +342,37 @@ body {
     margin-top: 4px;
 }
 
+/* ── Skills photo ── */
+.skills-photo-wrap {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+}
+
+.skills-photo-ring {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: 12px;
+    bottom: 12px;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-lg);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.skills-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-lg);
+    display: block;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
 /* ── Skills section ── */
 .skills-main-div {
     margin-top: 6rem;
@@ -799,7 +830,7 @@ body {
     .section-hero {
         flex-direction: column;
         text-align: center;
-        gap: 2.5rem;
+        gap: 2rem;
         min-height: unset;
         padding-top: 1rem;
     }
@@ -809,10 +840,7 @@ body {
     .hero-img { display: none; }
 
     .social-media-div { justify-content: center; }
-
-    .hero-actions {
-        justify-content: center;
-    }
+    .hero-actions { justify-content: center; }
 
     .stats-row {
         justify-content: center;
@@ -823,7 +851,7 @@ body {
     .skills-main-div {
         flex-direction: column;
         text-align: center;
-        gap: 2.5rem;
+        gap: 2rem;
         margin-top: 4rem;
     }
 
@@ -833,15 +861,12 @@ body {
         justify-content: center;
     }
 
-    .skills-image-div img {
-        max-width: 280px !important;
-        height: 300px !important;
-    }
+    .skills-photo-wrap { width: 100%; max-width: 340px; }
+    .skills-photo { height: 320px; }
+    .skills-photo-ring { display: none; }
 
     .skills-text-div h1 { font-size: 2rem; }
-
     .software-skills-main-div { justify-content: center; }
-
     .skill-list li { text-align: left; }
 
     /* Cards */
@@ -869,84 +894,97 @@ body {
     /* Cert grid */
     .cert-grid { grid-template-columns: 1fr; }
 
-    /* Main container */
+    /* Gallery */
+    .gallery-grid-2 {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+    }
+    .gallery-grid-2 > div { height: 240px; }
+    .gallery-info { padding: 1.5rem !important; }
+
+    .experience-card { padding-left: 1.25rem !important; }
+
     .main-container { padding: 100px 1.25rem 60px; }
 }
 
 /* ── Mobile (max 600px) ── */
 @media (max-width: 600px) {
 
-    /* Nav */
     .logo { font-size: 1.6rem; }
 
     /* Hero */
-    .hero-text h1 { font-size: 1.85rem; }
-    .hero-text p { font-size: 1rem; }
-    .hero-img img { max-width: 260px; }
+    .section-hero { gap: 1.5rem; padding-top: 0.5rem; }
+    .hero-text h1 { font-size: 1.75rem; line-height: 1.2; }
+    .hero-text p { font-size: 0.95rem; }
 
-    .stats-row { gap: 1.5rem; }
-    .stat-item .stat-num { font-size: 2.2rem; }
+    .section-label { font-size: 0.7rem; }
 
-    /* Buttons row */
-    .hero-text > div[style] { flex-direction: column; align-items: center; }
-
-    /* Skills */
-    .skills-image-div img {
-        max-width: 220px !important;
-        height: 240px !important;
+    /* Buttons */
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .hero-actions .btn,
+    .hero-actions .btn-outline {
+        width: 100%;
+        justify-content: center;
     }
 
+    /* Stats */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        text-align: center;
+    }
+    .stat-item .stat-num { font-size: 1.8rem; }
+    .stat-item .stat-label { font-size: 0.65rem; }
+
+    /* Social icons */
+    .social-media-div { gap: 8px; }
+    .social-icon { width: 36px; height: 36px; font-size: 0.95rem; }
+
+    /* Skills */
+    .skills-main-div { margin-top: 3rem; gap: 1.5rem; }
+    .skills-photo-wrap { max-width: 280px; }
+    .skills-photo { height: 260px; }
+    .skills-text-div h1 { font-size: 1.6rem; }
+
     .software-skill-inline { padding: 8px 10px; }
-    .software-skill-inline span { font-size: 0.65rem; }
+    .software-skill-inline span { font-size: 0.62rem; }
 
     /* Cards */
     .degree-card,
     .experience-card { padding: 1.25rem; }
-
     .card-title h2 { font-size: 1rem; }
     .card-title h3 { font-size: 0.88rem; }
+    .card-icon { width: 40px; height: 40px; }
 
     /* Page banner */
-    .page-banner h1 { font-size: 1.9rem; }
-    .page-banner p { font-size: 0.9rem; }
+    .page-banner { padding: 2.5rem 1rem 1.5rem; }
+    .page-banner h1 { font-size: 1.75rem; }
+    .page-banner p { font-size: 0.88rem; }
 
     /* Projects */
     .repo-card-div { padding: 1.25rem; }
+    .section-heading-row h1 { font-size: 1.6rem; }
 
     /* Contact */
-    .contact-left h1 { font-size: 2rem; }
-    .contact-right { padding: 1.5rem 1.25rem; }
-    .contact-right h2 { font-size: 1.25rem; }
+    .contact-left h1 { font-size: 1.75rem; }
+    .contact-right { padding: 1.25rem 1rem; }
+    .contact-right h2 { font-size: 1.15rem; }
+    .contact-info-list li { font-size: 0.9rem; }
+
+    /* Gallery */
+    .gallery-grid-2 > div { height: 200px; }
+    .gallery-info { padding: 1rem !important; }
 
     /* Footer */
     .footer-div { padding: 2rem 1rem; }
+    .footer-logo { font-size: 1.5rem; }
 
-    /* Gallery images — stack on small screens */
-    .gallery-grid-2 {
-        grid-template-columns: 1fr !important;
-        height: auto !important;
-    }
-
-    .gallery-grid-2 > div {
-        height: 220px;
-    }
-
-    /* Experience card left border adjust */
-    .experience-card {
-        padding-left: 1.25rem !important;
-    }
-
-    /* Gallery info padding */
-    .gallery-info {
-        padding: 1.25rem !important;
-    }
-
-    /* Contact info list */
-    .contact-info-list li {
-        font-size: 0.92rem;
-    }
-
-    /* Main container */
-    .main-container { padding: 90px 1rem 50px; }
+    .main-container { padding: 88px 1rem 50px; }
 }
+
 

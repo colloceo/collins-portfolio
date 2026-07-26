@@ -238,32 +238,6 @@ export const portfolioData = {
                 ]
             },
             {
-                id: "2",
-                name: "News254",
-                createdAt: "2024",
-                description: "Laravel CMS for Kenyan news, featuring advanced SEO, mobile optimization, and a custom content management backend serving thousands of daily readers.",
-                url: "https://news254.co.ke",
-                github: "https://github.com/colloceo/news254-laravel",
-                languages: [
-                    { name: "PHP", iconifyClass: "simple-icons:php" },
-                    { name: "Laravel", iconifyClass: "simple-icons:laravel" },
-                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
-                ]
-            },
-            {
-                id: "3",
-                name: "MaliMall",
-                createdAt: "2024",
-                description: "E-commerce marketplace for Kenyan artisans with secure M-Pesa STK Push payment integration, product listings, and order management.",
-                url: "https://juuakali.ct.ws",
-                github: "https://github.com/colloceo/MaliMall",
-                languages: [
-                    { name: "PHP", iconifyClass: "simple-icons:php" },
-                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
-                    { name: "Bootstrap", iconifyClass: "simple-icons:bootstrap" },
-                ]
-            },
-            {
                 id: "4",
                 name: "UniExamHelper",
                 createdAt: "2024",
@@ -274,6 +248,43 @@ export const portfolioData = {
                     { name: "React", iconifyClass: "simple-icons:react" },
                     { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
                     { name: "OpenAI", iconifyClass: "simple-icons:openai" },
+                ]
+            },
+            {
+                id: "5",
+                name: "Collins Portfolio",
+                createdAt: "2026",
+                description: "My personal portfolio website showcasing projects, experience, and skills. Built with React, Vite, and Framer Motion for smooth animations and a responsive design.",
+                url: "https://colloceo.netlify.app/",
+                github: "https://github.com/colloceo/collins-portfolio",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "Vite", iconifyClass: "simple-icons:vite" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                ]
+            },
+            {
+                id: "6",
+                name: "More Classifieds",
+                createdAt: "2026",
+                description: "Kenya's digital marketplace connecting 13,000+ SMEs with buyers. Enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
+                url: "https://more.co.ke/",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                ]
+            },
+            {
+                id: "7",
+                name: "MiniDB",
+                createdAt: "2026",
+                description: "A custom RDBMS built from scratch in Python. Features O(N) Hash Joins, ACID-compliant Atomic Writes, B-Tree Indexing concepts, and a Flask-based Admin Dashboard. Built for the Pesapal Junior Dev Challenge '26.",
+                url: "https://github.com/colloceo/MiniDB",
+                github: "https://github.com/colloceo/MiniDB",
+                languages: [
+                    { name: "Python", iconifyClass: "simple-icons:python" },
+                    { name: "Flask", iconifyClass: "simple-icons:flask" },
                 ]
             }
         ]

@@ -24,7 +24,7 @@ const Projects = () => {
                 >
                     <span className="section-label">Portfolio</span>
                     <h1>Projects</h1>
-                    <p>A selection of things I've built — from web apps to full-stack platforms.</p>
+                    <p>A selection of things I've built, from web apps to full-stack platforms.</p>
                 </motion.div>
             </div>
 

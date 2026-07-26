@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { portfolioData as data } from "../data";
 
@@ -12,7 +12,25 @@ const fadeUp = {
     }),
 };
 
+const skillsCarouselImages = [
+    "/skills-carousel-1.jpg",
+    "/skills-carousel-2.jpg",
+    "/skills-carousel-3.jpg",
+    "/skills-carousel-4.jpg",
+    "/skills-carousel-5.jpg",
+    "/skills-carousel-6.jpg",
+];
+
 const Home = () => {
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveSlide((prev) => (prev + 1) % skillsCarouselImages.length);
+        }, 3500);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="main-container">
 
@@ -54,11 +72,7 @@ const Home = () => {
                     </motion.div>
 
                     <motion.div variants={fadeUp} className="hero-actions">
-                        <a href={data.greeting.resumeLink} target="_blank" rel="noreferrer" className="btn">
-                            View Resume
-                            <Icon icon="lucide:arrow-right" width={16} />
-                        </a>
-                        <a href={data.socials.github} target="_blank" rel="noreferrer" className="btn-outline">
+                        <a href={data.socials.github} target="_blank" rel="noreferrer" className="btn">
                             <Icon icon="simple-icons:github" width={16} />
                             GitHub
                         </a>
@@ -101,11 +115,28 @@ const Home = () => {
                 <div className="skills-image-div">
                     <div className="skills-photo-wrap">
                         <div className="skills-photo-ring" />
-                        <img
-                            src="/code_africa2.jpg"
-                            alt="Collins Otieno at Code Africa 2025"
-                            className="skills-photo"
-                        />
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={activeSlide}
+                                src={skillsCarouselImages[activeSlide]}
+                                alt={`${data.name} photo ${activeSlide + 1}`}
+                                className="skills-photo"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                            />
+                        </AnimatePresence>
+                        <div className="skills-photo-dots">
+                            {skillsCarouselImages.map((_, i) => (
+                                <button
+                                    key={i}
+                                    className={`skills-photo-dot${i === activeSlide ? " active" : ""}`}
+                                    onClick={() => setActiveSlide(i)}
+                                    aria-label={`Show photo ${i + 1}`}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 

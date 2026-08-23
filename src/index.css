@@ -1072,4 +1072,102 @@ body {
     .main-container { padding: 88px 1rem 50px; }
 }
 
+/* ── Terminal ── */
+.terminal-section {
+    margin-top: 6rem;
+}
+
+.terminal-window {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    cursor: text;
+}
+
+.terminal-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.terminal-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dot-red { background: #ff5f56; }
+.terminal-dot-yellow { background: #ffbd2e; }
+.terminal-dot-green { background: #27c93f; }
+
+.terminal-titlebar-label {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.terminal-body {
+    height: 380px;
+    overflow-y: auto;
+    padding: 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+.terminal-body::-webkit-scrollbar { width: 8px; }
+.terminal-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 8px; }
+
+.terminal-muted { color: var(--text-muted); }
+.terminal-accent { color: var(--accent); }
+.terminal-error { color: #ff5f56; }
+.terminal-indent { padding-left: 2ch; }
+.terminal-banner-name {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.terminal-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.3);
+}
+.terminal-link:hover { color: var(--accent); }
+
+.terminal-input-row {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: inherit;
+    caret-color: var(--accent);
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .terminal-section { margin-top: 4rem; }
+    .terminal-body { height: 320px; font-size: 0.78rem; padding: 1rem; }
+}
+
+@media (max-width: 600px) {
+    .terminal-body { height: 280px; font-size: 0.72rem; }
+}
+
 

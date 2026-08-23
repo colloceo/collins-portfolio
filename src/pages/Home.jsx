@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { portfolioData as data } from "../data";
+import Terminal from "../components/Terminal";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -103,6 +104,19 @@ const Home = () => {
                     <img src="/hero.png" alt={`${data.name} hero illustration`} />
                 </motion.div>
             </section>
+
+            {/* ── Terminal ── */}
+            <motion.section
+                className="terminal-section"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+            >
+                <span className="section-label">Poke Around</span>
+                <h1 style={{ marginBottom: "1.5rem" }}>Try the Terminal</h1>
+                <Terminal />
+            </motion.section>
 
             {/* ── Skills ── */}
             <motion.section

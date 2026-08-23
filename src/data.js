@@ -6,7 +6,7 @@ export const portfolioData = {
     email: "c.otieno@digitalleap.africa",
     phone: "+254768581254",
     resumeUrl: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link",
-    bio: "I don't just write code; I build scalable systems. Full-Stack Engineer and Co-Founder based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. I specialize in Python, FastAPI, and high-performance architecture, recently handling 17,800+ requests in 24 hours with 100% uptime.",
+    bio: "I don't just write code; I build scalable systems. Full-Stack Engineer and Co-Founder based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. My platforms have handled 17,800+ requests in 24 hours with 100% uptime, built with React, Python/FastAPI, and Laravel.",
     socials: {
         linkedin: "https://www.linkedin.com/in/collins-otieno-450131362",
         github: "https://github.com/colloceo",
@@ -17,7 +17,7 @@ export const portfolioData = {
     },
     greeting: {
         title: "Hi There, I'm Collins Otieno",
-        subTitle: "Full-Stack Engineer specializing in React, Python FastAPI, and Flutter mobile development. I build scalable systems and EdTech platforms for African youth.",
+        subTitle: "Full-Stack Engineer building React platforms, Python/FastAPI services, and Flutter mobile apps. Co-Founder of Digital Leap Africa, an EdTech platform for African youth.",
         resumeLink: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link"
     },
     skills: {
@@ -70,13 +70,13 @@ export const portfolioData = {
             },
         ],
         skills: [
-            "Building modern, responsive web apps with React and JavaScript",
-            "Developing high-performance REST APIs with Python and FastAPI",
-            "Creating cross-platform mobile apps with Flutter for Android and iOS",
-            "Building robust Laravel backends that handle 17,000+ requests per day with 100% uptime",
-            "Implementing custom server security including firewalls, bot protection, and threat blocking",
-            "Driving organic growth with advanced SEO strategies and technical site optimization",
-            "Solar system installation, electrical wiring, and industrial motor repair",
+            "Building full-stack platforms with React, including Aura Movies' streaming interface and More Classifieds' marketplace for 13,000+ Kenyan SMEs",
+            "Building Python/FastAPI services, including Aura Movies' torrent-streaming and download API",
+            "Developing cross-platform mobile apps with Flutter for Android and iOS",
+            "Building Laravel/MySQL backends, including Digital Leap Africa's LMS with gamification, job boards, and automated certifications",
+            "Implementing custom firewall rules and bot-protection logic that kept Aura Movies at 100% uptime through 17,800+ requests in a single day",
+            "Teaching PHP, Laravel, and SEO through private tutoring and hands-on web development coaching",
+            "NITA-certified electrical work: solar panel installation, industrial wiring, and motor repair",
         ]
     },
     degrees: [

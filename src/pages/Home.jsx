@@ -47,7 +47,7 @@ const Home = () => {
                     </motion.span>
 
                     <motion.h1 variants={fadeUp}>
-                        Hi, I'm <mark>Collins</mark> and I Build Scalable Digital Products
+                        Hi, I'm <mark>Collins Otieno</mark> and I Build Scalable Digital Products
                     </motion.h1>
 
                     <motion.p variants={fadeUp}>

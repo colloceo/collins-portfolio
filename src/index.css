@@ -914,6 +914,7 @@ body {
         order: -1;
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .skills-photo-wrap { width: 100%; max-width: 340px; height: 320px; }

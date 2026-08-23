@@ -215,13 +215,13 @@ export const portfolioData = {
                 id: "0",
                 name: "AuraMovies",
                 createdAt: "2025",
-                description: "A high-performance video streaming aggregator built with Laravel. Handled 17,800+ requests in a single day (Dec 24, 2025) with 100% uptime. Features custom firewall rules, bot-protection logic, zero ads, and no signup barriers.",
-                url: "https://auramovies.com",
+                description: "A high-performance video streaming aggregator built with React, TypeScript, and Supabase. Handled 17,800+ requests in a single day (Dec 24, 2025) with 100% uptime. Features custom firewall rules, bot-protection logic, zero ads, and no signup barriers.",
+                url: "https://auramovies.top",
                 github: "https://github.com/colloceo",
                 languages: [
-                    { name: "PHP", iconifyClass: "simple-icons:php" },
-                    { name: "Laravel", iconifyClass: "simple-icons:laravel" },
-                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
+                    { name: "Supabase", iconifyClass: "simple-icons:supabase" },
                 ]
             },
             {
@@ -235,19 +235,6 @@ export const portfolioData = {
                     { name: "Laravel", iconifyClass: "simple-icons:laravel" },
                     { name: "PHP", iconifyClass: "simple-icons:php" },
                     { name: "MySQL", iconifyClass: "simple-icons:mysql" },
-                ]
-            },
-            {
-                id: "4",
-                name: "UniExamHelper",
-                createdAt: "2024",
-                description: "AI-powered assistant for university students to efficiently solve and understand exam questions. Integrated with OpenAI API and built with React and TypeScript.",
-                url: "https://lambent-caramel-4f9e54.netlify.app/",
-                github: "https://github.com/colloceo/UniExamHelper",
-                languages: [
-                    { name: "React", iconifyClass: "simple-icons:react" },
-                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
-                    { name: "OpenAI", iconifyClass: "simple-icons:openai" },
                 ]
             },
             {
@@ -285,6 +272,32 @@ export const portfolioData = {
                 languages: [
                     { name: "Python", iconifyClass: "simple-icons:python" },
                     { name: "Flask", iconifyClass: "simple-icons:flask" },
+                ]
+            },
+            {
+                id: "8",
+                name: "Zynk",
+                createdAt: "2025",
+                description: "A Twitter-like social media platform built with PHP and MySQL. Features post creation with text and images, likes, comments, trending hashtags, search, light/dark themes, and infinite scroll.",
+                url: "https://wantam.2kool4u.net/",
+                github: "https://github.com/colloceo/WAN-TAM",
+                languages: [
+                    { name: "PHP", iconifyClass: "simple-icons:php" },
+                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                ]
+            },
+            {
+                id: "9",
+                name: "Snakes & Ladders",
+                createdAt: "2025",
+                description: "A modern, interactive web-based Snakes & Ladders game with 1-player (vs computer) and 2-player modes, smooth token and dice animations, and a real-time game log. Built as a PWA with offline support.",
+                url: "https://colloceo.github.io/snakes/",
+                github: "https://github.com/colloceo/snakes",
+                languages: [
+                    { name: "HTML5", iconifyClass: "simple-icons:html5" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                    { name: "CSS3", iconifyClass: "simple-icons:css3" },
                 ]
             }
         ]

@@ -1,235 +1,171 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Icon } from "@iconify/react";
 import { portfolioData as data } from "../data";
 
 const Gallery = () => {
-    const [lightbox, setLightbox] = useState(null);
-    const [activeFilter, setActiveFilter] = useState("All");
+  const [lightbox, setLightbox] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
 
-    const categories = ["All", ...new Set(data.gallery.map((e) => e.category))];
-    const filtered = activeFilter === "All"
-        ? data.gallery
-        : data.gallery.filter((e) => e.category === activeFilter);
+  const categories = ["All", ...new Set(data.gallery.map((e) => e.category))];
+  const filtered =
+    activeFilter === "All"
+      ? data.gallery
+      : data.gallery.filter((e) => e.category === activeFilter);
 
-    const openLightbox = (images, index) => setLightbox({ images, index });
-    const closeLightbox = () => setLightbox(null);
-    const prevImage = () => setLightbox((lb) => ({ ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length }));
-    const nextImage = () => setLightbox((lb) => ({ ...lb, index: (lb.index + 1) % lb.images.length }));
+  const openLightbox = (images, index) => setLightbox({ images, index });
+  const closeLightbox = () => setLightbox(null);
+  const prevImage = () =>
+    setLightbox((lb) => ({
+      ...lb,
+      index: (lb.index - 1 + lb.images.length) % lb.images.length,
+    }));
+  const nextImage = () =>
+    setLightbox((lb) => ({
+      ...lb,
+      index: (lb.index + 1) % lb.images.length,
+    }));
 
-    return (
-        <div>
-            <div className="page-banner">
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                    <span className="section-label">Events &amp; Appearances</span>
-                    <h1>Gallery</h1>
-                    <p>Hackathons, conferences, and tech expos across Kenya</p>
-                </motion.div>
-            </div>
+  return (
+    <section
+      id="gallery"
+      className="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+    >
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-lg text-[var(--sec)] mb-2 shiny-sec">
+          Events &amp; Appearances
+        </h2>
+        <h3 className="text-4xl md:text-5xl font-medium mb-6">Gallery</h3>
 
-            <div className="main-container page-content">
-
-                {/* Filter pills */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "3rem" }}
-                >
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveFilter(cat)}
-                            style={{
-                                padding: "8px 20px",
-                                borderRadius: "50px",
-                                border: `1px solid ${activeFilter === cat ? "var(--accent)" : "var(--border)"}`,
-                                background: activeFilter === cat ? "var(--accent)" : "transparent",
-                                color: activeFilter === cat ? "#fff" : "var(--text-muted)",
-                                fontWeight: 600,
-                                fontSize: "0.85rem",
-                                cursor: "pointer",
-                                transition: "all 0.2s ease",
-                            }}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </motion.div>
-
-                {/* Event cards */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
-                    {filtered.map((event, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: i * 0.08 }}
-                            style={{
-                                background: "var(--bg-card)",
-                                border: "1px solid var(--border)",
-                                borderRadius: "var(--radius-lg)",
-                                overflow: "hidden",
-                            }}
-                        >
-                            {/* Images */}
-                            <div
-                                className="gallery-grid-2"
-                                style={{
-                                    display: "grid",
-                                    gridTemplateColumns: `repeat(${event.images.length}, 1fr)`,
-                                    gap: "2px",
-                                    height: "300px",
-                                }}
-                            >
-                                {event.images.map((img, j) => (
-                                    <div
-                                        key={j}
-                                        onClick={() => openLightbox(event.images, j)}
-                                        className="gallery-thumb"
-                                        style={{ overflow: "hidden", cursor: "zoom-in", position: "relative", background: "#0a0a0a" }}
-                                    >
-                                        <img
-                                            src={img}
-                                            alt={`${event.title} photo ${j + 1}`}
-                                            style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", background: "#0a0a0a", transition: "transform 0.4s ease", display: "block" }}
-                                            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.06)"}
-                                            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
-                                        />
-                                        <div style={{
-                                            position: "absolute", inset: 0,
-                                            background: "rgba(253,83,32,0.12)",
-                                            display: "flex", alignItems: "center", justifyContent: "center",
-                                            opacity: 0, transition: "opacity 0.3s ease",
-                                        }}
-                                            onMouseEnter={(e) => e.currentTarget.style.opacity = "1"}
-                                            onMouseLeave={(e) => e.currentTarget.style.opacity = "0"}
-                                        >
-                                            <Icon icon="lucide:zoom-in" width={32} color="#fff" />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Info */}
-                            <div className="gallery-info">
-                                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.75rem", marginBottom: "1rem" }}>
-                                    <div>
-                                        <span className="section-label">{event.category}</span>
-                                        <h2 style={{ fontSize: "1.3rem", fontWeight: 700 }}>{event.title}</h2>
-                                    </div>
-                                    <div style={{ textAlign: "right" }}>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--text-muted)", fontSize: "0.85rem", marginBottom: "4px", justifyContent: "flex-end" }}>
-                                            <Icon icon="lucide:calendar" width={13} />
-                                            {event.date}
-                                        </div>
-                                        <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--text-muted)", fontSize: "0.85rem", justifyContent: "flex-end" }}>
-                                            <Icon icon="lucide:map-pin" width={13} />
-                                            {event.location}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p style={{ color: "var(--text-muted)", lineHeight: "1.7", marginBottom: "1.25rem", fontSize: "0.95rem" }}>
-                                    {event.description}
-                                </p>
-
-                                <div style={{
-                                    display: "flex", alignItems: "flex-start", gap: "10px",
-                                    padding: "12px 16px",
-                                    background: "rgba(253,83,32,0.06)",
-                                    border: "1px solid rgba(253,83,32,0.2)",
-                                    borderRadius: "var(--radius-sm)",
-                                }}>
-                                    <Icon icon="lucide:trophy" width={15} style={{ color: "var(--accent)", marginTop: 2, flexShrink: 0 }} />
-                                    <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: "1.5" }}>
-                                        {event.achievements}
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Lightbox */}
-            <AnimatePresence>
-                {lightbox && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={closeLightbox}
-                        style={{
-                            position: "fixed", inset: 0,
-                            background: "rgba(0,0,0,0.93)",
-                            zIndex: 9999,
-                            display: "flex", alignItems: "center", justifyContent: "center",
-                            padding: "2rem",
-                        }}
-                    >
-                        {/* Close */}
-                        <button onClick={closeLightbox} style={lbBtnStyle({ top: "1.5rem", right: "1.5rem" })}>
-                            <Icon icon="lucide:x" width={20} />
-                        </button>
-
-                        {/* Prev */}
-                        {lightbox.images.length > 1 && (
-                            <button onClick={(e) => { e.stopPropagation(); prevImage(); }} style={lbBtnStyle({ left: "1.5rem" })}>
-                                <Icon icon="lucide:chevron-left" width={22} />
-                            </button>
-                        )}
-
-                        {/* Image */}
-                        <motion.img
-                            key={lightbox.index}
-                            initial={{ opacity: 0, scale: 0.92 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.22 }}
-                            src={lightbox.images[lightbox.index]}
-                            alt="Gallery"
-                            onClick={(e) => e.stopPropagation()}
-                            style={{
-                                maxWidth: "90vw", maxHeight: "85vh",
-                                objectFit: "contain",
-                                borderRadius: "var(--radius-md)",
-                                boxShadow: "0 40px 80px rgba(0,0,0,0.6)",
-                            }}
-                        />
-
-                        {/* Next */}
-                        {lightbox.images.length > 1 && (
-                            <button onClick={(e) => { e.stopPropagation(); nextImage(); }} style={lbBtnStyle({ right: "1.5rem" })}>
-                                <Icon icon="lucide:chevron-right" width={22} />
-                            </button>
-                        )}
-
-                        {/* Counter */}
-                        <div style={{
-                            position: "absolute", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)",
-                            color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", fontWeight: 600,
-                        }}>
-                            {lightbox.index + 1} / {lightbox.images.length}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+        {/* Filter pills */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {categories.map((cat) => {
+            const isActive = activeFilter === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
+                  isActive
+                    ? "border-[var(--sec)] bg-[#a476ff1f] text-white"
+                    : "border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-white"
+                }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
         </div>
-    );
-};
 
-const lbBtnStyle = (pos) => ({
-    position: "absolute",
-    ...pos,
-    background: "rgba(255,255,255,0.08)",
-    border: "1px solid rgba(255,255,255,0.15)",
-    borderRadius: "50%",
-    width: 44, height: 44,
-    display: "flex", alignItems: "center", justifyContent: "center",
-    cursor: "pointer", color: "#fff",
-    transition: "background 0.2s ease",
-});
+        {/* Event cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {filtered.map((event, i) => (
+            <div
+              key={i}
+              className="bg-[#1414149c] border border-[var(--white-icon-tr)] rounded-2xl overflow-hidden flex flex-col justify-between"
+            >
+              <div>
+                <div className="grid grid-cols-2 gap-1 h-52 bg-[#0b0b0b]">
+                  {event.images.map((img, j) => (
+                    <div
+                      key={j}
+                      onClick={() => openLightbox(event.images, j)}
+                      className="overflow-hidden cursor-pointer relative group"
+                    >
+                      <img
+                        src={img}
+                        alt={`${event.title} ${j + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="text-xs px-3 py-1 rounded-full bg-black/70 text-white border border-white/20">
+                          View
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-5">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-xs font-medium text-[var(--sec)] uppercase tracking-wider">
+                      {event.category}
+                    </span>
+                    <span className="text-xs text-[var(--white-icon)]">
+                      {event.date} · {event.location}
+                    </span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-[var(--white)] mb-2">
+                    {event.title}
+                  </h4>
+                  <p className="text-sm text-[var(--white-icon)] leading-relaxed mb-3">
+                    {event.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-5 pb-5">
+                <div className="text-xs text-[var(--white-icon)] p-3 rounded-xl bg-[var(--white-icon-tr)] border border-[var(--white-icon-tr)]">
+                  <span className="text-[var(--sec)] font-semibold">
+                    Highlight:{" "}
+                  </span>
+                  {event.achievements}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          onClick={closeLightbox}
+          className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4"
+        >
+          <button
+            onClick={closeLightbox}
+            aria-label="Close"
+            className="absolute top-6 right-6 size-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl"
+          >
+            ✕
+          </button>
+
+          {lightbox.images.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              aria-label="Previous"
+              className="absolute left-6 size-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl"
+            >
+              ‹
+            </button>
+          )}
+
+          <img
+            src={lightbox.images[lightbox.index]}
+            alt="Gallery preview"
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl shadow-2xl"
+          />
+
+          {lightbox.images.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              aria-label="Next"
+              className="absolute right-6 size-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl"
+            >
+              ›
+            </button>
+          )}
+        </div>
+      )}
+    </section>
+  );
+};
 
 export default Gallery;

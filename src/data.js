@@ -212,6 +212,79 @@ export const portfolioData = {
     projects: {
         data: [
             {
+                id: "6",
+                name: "More Classifieds",
+                createdAt: "2026",
+                description: "Kenya's digital marketplace connecting 13,000+ SMEs with buyers. Enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
+                url: "https://more.co.ke",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                ]
+            },
+            {
+                id: "13",
+                name: "More Trade",
+                createdAt: "2026",
+                description: "Request for Quote (RFQ) B2B trade portal by More Classifieds connecting verified wholesale suppliers and buyers.",
+                url: "https://trade.more.co.ke/",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
+                ]
+            },
+            {
+                id: "10",
+                name: "Koreal",
+                createdAt: "2026",
+                description: "Real estate and short-stay property discovery platform in Kenya featuring interactive map search, BnB, rent, and buy listings.",
+                url: "https://koreal.app",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
+                ]
+            },
+            {
+                id: "11",
+                name: "Silica",
+                createdAt: "2026",
+                description: "Unified logistics, local shopping, and fleet operations platform powering package deliveries, Shopit, Silica Market, Silica Drive, and the Silica Console.",
+                url: "https://silica.ke",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "Flutter", iconifyClass: "simple-icons:flutter" },
+                ]
+            },
+            {
+                id: "12",
+                name: "Locus Journal",
+                createdAt: "2026",
+                description: "A private map journal for capturing places, experiences, and the stories behind them with local-first privacy.",
+                url: "https://locusjournal.com",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
+                ]
+            },
+            {
+                id: "14",
+                name: "News254",
+                createdAt: "2025",
+                description: "Digital news and media platform delivering breaking news, politics, business, tech trends, and stories across Kenya.",
+                url: "https://news254ke.co.ke/",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "PHP", iconifyClass: "simple-icons:php" },
+                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
+                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
+                ]
+            },
+            {
                 id: "0",
                 name: "AuraMovies",
                 createdAt: "2025",
@@ -225,44 +298,6 @@ export const portfolioData = {
                 ]
             },
             {
-                id: "1",
-                name: "Digital Leap Africa (LMS)",
-                createdAt: "2025",
-                description: "Full EdTech platform for African youth. Complete LMS built with Laravel and MySQL featuring gamification, job boards, automated certifications, and course management.",
-                url: "https://digitalleap.africa",
-                github: "https://github.com/colloceo",
-                languages: [
-                    { name: "Laravel", iconifyClass: "simple-icons:laravel" },
-                    { name: "PHP", iconifyClass: "simple-icons:php" },
-                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
-                ]
-            },
-            {
-                id: "5",
-                name: "Collins Portfolio",
-                createdAt: "2026",
-                description: "My personal portfolio website showcasing projects, experience, and skills. Built with React, Vite, and Framer Motion for smooth animations and a responsive design.",
-                url: "https://colloceo.netlify.app/",
-                github: "https://github.com/colloceo/collins-portfolio",
-                languages: [
-                    { name: "React", iconifyClass: "simple-icons:react" },
-                    { name: "Vite", iconifyClass: "simple-icons:vite" },
-                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
-                ]
-            },
-            {
-                id: "6",
-                name: "More Classifieds",
-                createdAt: "2026",
-                description: "Kenya's digital marketplace connecting 13,000+ SMEs with buyers. Enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
-                url: "https://more.co.ke/",
-                github: "https://github.com/colloceo",
-                languages: [
-                    { name: "React", iconifyClass: "simple-icons:react" },
-                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
-                ]
-            },
-            {
                 id: "7",
                 name: "MiniDB",
                 createdAt: "2026",
@@ -272,32 +307,6 @@ export const portfolioData = {
                 languages: [
                     { name: "Python", iconifyClass: "simple-icons:python" },
                     { name: "Flask", iconifyClass: "simple-icons:flask" },
-                ]
-            },
-            {
-                id: "8",
-                name: "Zynk",
-                createdAt: "2025",
-                description: "A Twitter-like social media platform built with PHP and MySQL. Features post creation with text and images, likes, comments, trending hashtags, search, light/dark themes, and infinite scroll.",
-                url: "https://wantam.2kool4u.net/",
-                github: "https://github.com/colloceo/WAN-TAM",
-                languages: [
-                    { name: "PHP", iconifyClass: "simple-icons:php" },
-                    { name: "MySQL", iconifyClass: "simple-icons:mysql" },
-                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
-                ]
-            },
-            {
-                id: "9",
-                name: "Snakes & Ladders",
-                createdAt: "2025",
-                description: "A modern, interactive web-based Snakes & Ladders game with 1-player (vs computer) and 2-player modes, smooth token and dice animations, and a real-time game log. Built as a PWA with offline support.",
-                url: "https://colloceo.github.io/snakes/",
-                github: "https://github.com/colloceo/snakes",
-                languages: [
-                    { name: "HTML5", iconifyClass: "simple-icons:html5" },
-                    { name: "JavaScript", iconifyClass: "simple-icons:javascript" },
-                    { name: "CSS3", iconifyClass: "simple-icons:css3" },
                 ]
             }
         ]

@@ -7,6 +7,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
+    <!-- Preload Montserrat Variable font from dark-minimal -->
+    <link
+      rel="preload"
+      href="/fonts/montserrat-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <!-- Primary SEO -->
     <title>Collins Otieno | Full Stack Engineer & Co-Founder | Nairobi, Kenya</title>
     <meta name="description" content="Collins Otieno is a Full Stack Engineer and Co-Founder based in Nairobi, Kenya. Specializing in Python, FastAPI, React, Flutter, MySQL and high-performance web architecture. Built systems handling 17,800+ requests/day with 100% uptime." />
@@ -79,16 +88,11 @@
     }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet" />
-
     <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#040404" />
-    <meta name="msapplication-TileColor" content="#040404" />
+    <meta name="theme-color" content="#101010" />
+    <meta name="msapplication-TileColor" content="#101010" />
   </head>
-  <body>
+  <body class="bg-[--background] px-4 sm:px-8 md:px-14 lg:px-20">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

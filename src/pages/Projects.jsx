@@ -10,6 +10,13 @@ const projects = [
     status: "Deployed",
   },
   {
+    title: "AuraMovies",
+    image: "/assets/images/auramovies.png",
+    link: "https://github.com/colloceo",
+    preview: "https://auramovies.top/",
+    status: "Deployed",
+  },
+  {
     title: "More Trade",
     image: "/assets/images/trademore.png",
     link: "https://github.com/colloceo",

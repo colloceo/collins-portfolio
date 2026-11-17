@@ -69,8 +69,10 @@ const SkillsList = () => {
       "Laravel/MySQL backends (Digital Leap Africa LMS with gamification & certifications)",
     ],
     "Mobile & Cross-Platform Apps": [
-      "Cross-platform mobile apps with Flutter for Android & iOS",
-      "Responsive web apps & Progressive Web Apps (PWAs)",
+      "Cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate & Silica Delivery Suite: Client & Drive)",
+      "Live GPS map tracking, dynamic route navigation & automated driver dispatch",
+      "Mobile commerce & storefront platforms (Shopit) with real-time driver proximity shipping",
+      "Mobile money (M-Pesa) integration & digital proof of delivery (POD)",
     ],
     "Security, Mentorship & Systems": [
       "Custom firewall rules & bot protection (17,800+ req/day at 100% uptime)",

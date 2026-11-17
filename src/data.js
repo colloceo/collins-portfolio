@@ -1,12 +1,12 @@
 export const portfolioData = {
     name: "Collins Otieno",
     nickname: "colloceo",
-    title: "Full Stack Engineer & Co-Founder",
+    title: "Software Engineer",
     location: "Nairobi, Kenya",
-    email: "c.otieno@digitalleap.africa",
+    email: "otienocollins0549@gmail.com",
     phone: "+254768581254",
     resumeUrl: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link",
-    bio: "I don't just write code; I build scalable systems. Full-Stack Engineer and Co-Founder based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. My platforms have handled 17,800+ requests in 24 hours with 100% uptime, built with React, Python/FastAPI, and Laravel.",
+    bio: "I don't just write code; I craft high-performance web platforms, cross-platform mobile apps, and scalable systems. Software Engineer based in Nairobi, pursuing a Bachelor of Technology in Communication and Computer Networks at The Technical University of Kenya. Creator of platforms handling 17,800+ daily requests with 100% uptime, cross-platform Flutter apps for Koreal and Silica, and e-commerce solutions like Shopit, built with React, Flutter, Python/FastAPI, and Laravel.",
     socials: {
         linkedin: "https://www.linkedin.com/in/collins-otieno-450131362",
         github: "https://github.com/colloceo",
@@ -17,7 +17,7 @@ export const portfolioData = {
     },
     greeting: {
         title: "Hi There, I'm Collins Otieno",
-        subTitle: "Full-Stack Engineer building React platforms, Python/FastAPI services, and Flutter mobile apps. Co-Founder of Digital Leap Africa, an EdTech platform for African youth.",
+        subTitle: "Software Engineer building spectacular React platforms, Flutter mobile apps (Koreal & Silica), Python/FastAPI services, and e-commerce solutions like Shopit.",
         resumeLink: "https://drive.google.com/file/d/1kcwK3yBPIhQifzs8FNUWWaxm6Q_pJDxR/view?usp=drive_link"
     },
     skills: {
@@ -71,8 +71,9 @@ export const portfolioData = {
         ],
         skills: [
             "Building full-stack platforms with React, including Aura Movies' streaming interface and More Classifieds' marketplace for 13,000+ Kenyan SMEs",
+            "Developing cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate & Silica Delivery Suite: Silica Client & Silica Drive)",
+            "Engineering instant local e-commerce and retail storefront platforms like Shopit with proximity-based dispatch integration",
             "Building Python/FastAPI services, including Aura Movies' torrent-streaming and download API",
-            "Developing cross-platform mobile apps with Flutter for Android and iOS",
             "Building Laravel/MySQL backends, including Digital Leap Africa's LMS with gamification, job boards, and automated certifications",
             "Implementing custom firewall rules and bot-protection logic that kept Aura Movies at 100% uptime through 17,800+ requests in a single day",
             "Teaching PHP, Laravel, and SEO through private tutoring and hands-on web development coaching",
@@ -154,8 +155,8 @@ export const portfolioData = {
     ],
     experience: {
         title: "Experience",
-        subtitle: "Work, Founding & Teaching",
-        description: "From co-founding an EdTech startup and architecting high-concurrency platforms, to teaching youth in Nairobi's underserved communities. I build and teach in equal measure.",
+        subtitle: "Work & Teaching",
+        description: "From architecting high-concurrency platforms and mobile delivery suites, to teaching youth in Nairobi's underserved communities. I build and mentor in equal measure.",
         sections: [
             {
                 title: "Work",
@@ -170,12 +171,12 @@ export const portfolioData = {
                         color: "#FD5320"
                     },
                     {
-                        title: "Co-Founder",
+                        title: "Lead Software Engineer",
                         company: "Digital Leap Africa",
                         company_logo: "digitalleap.png",
                         duration: "Jan 2025 to Present",
                         location: "Nairobi, KE · On-site",
-                        description: "Co-founded Digital Leap Africa, an EdTech platform bridging the digital skills gap for African youth. Built the complete LMS using Laravel/MySQL with gamification, job boards, and automated certifications.",
+                        description: "Led software development for Digital Leap Africa, an EdTech platform bridging the digital skills gap for African youth. Built the complete LMS using Laravel/MySQL with gamification, job boards, and automated certifications.",
                         color: "#ee3c26"
                     },
                     {
@@ -212,9 +213,52 @@ export const portfolioData = {
     projects: {
         data: [
             {
+                id: "koreal-mobile",
+                name: "Koreal Mobile App",
+                createdAt: "2026",
+                category: "Mobile",
+                description: "Cross-platform mobile application for real estate and short-stay BnB property discovery in Kenya. Features interactive map search, dynamic filtering (price, bedrooms, amenities), high-res photo carousels, host communication, and instant booking flows.",
+                url: "https://koreal.app",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "Flutter", iconifyClass: "simple-icons:flutter" },
+                    { name: "Dart", iconifyClass: "simple-icons:dart" },
+                    { name: "Google Maps", iconifyClass: "simple-icons:googlemaps" },
+                ]
+            },
+            {
+                id: "silica-mobile",
+                name: "Silica Mobile Apps (Client & Drive)",
+                createdAt: "2026",
+                category: "Mobile",
+                description: "Mobile logistics suite powering Silica. Silica Client offers doorstep package dispatch, transparent upfront quotes, and live GPS map tracking. Silica Drive equips delivery drivers with active turn-by-turn navigation, digital proof of delivery (POD), and mobile money/cash wallet reconciliation.",
+                url: "https://silica.ke",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "Flutter", iconifyClass: "simple-icons:flutter" },
+                    { name: "Dart", iconifyClass: "simple-icons:dart" },
+                    { name: "WebSockets", iconifyClass: "simple-icons:websocket" },
+                ]
+            },
+            {
+                id: "shopit",
+                name: "Shopit by Silica",
+                createdAt: "2026",
+                category: "E-Commerce",
+                description: "Instant retail & e-commerce shopping platform powered by Silica. Transforms local supermarkets (like Tumaini Stores) and retail inventory into online deliverable storefronts with live checkout shipping calculated from real-time driver proximity, catalog browsing, and mobile payments.",
+                url: "https://shopit.silica.ke/",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "Next.js", iconifyClass: "simple-icons:nextdotjs" },
+                    { name: "React", iconifyClass: "simple-icons:react" },
+                    { name: "Tailwind", iconifyClass: "simple-icons:tailwindcss" },
+                ]
+            },
+            {
                 id: "6",
                 name: "More Classifieds",
                 createdAt: "2026",
+                category: "Web",
                 description: "Kenya's digital marketplace connecting 13,000+ SMEs with buyers. Enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
                 url: "https://more.co.ke",
                 github: "https://github.com/colloceo",
@@ -227,6 +271,7 @@ export const portfolioData = {
                 id: "13",
                 name: "More Trade",
                 createdAt: "2026",
+                category: "Web",
                 description: "Request for Quote (RFQ) B2B trade portal by More Classifieds connecting verified wholesale suppliers and buyers.",
                 url: "https://trade.more.co.ke/",
                 github: "https://github.com/colloceo",
@@ -237,8 +282,9 @@ export const portfolioData = {
             },
             {
                 id: "10",
-                name: "Koreal",
+                name: "Koreal Web",
                 createdAt: "2026",
+                category: "Web",
                 description: "Real estate and short-stay property discovery platform in Kenya featuring interactive map search, BnB, rent, and buy listings.",
                 url: "https://koreal.app",
                 github: "https://github.com/colloceo",
@@ -249,20 +295,22 @@ export const portfolioData = {
             },
             {
                 id: "11",
-                name: "Silica",
+                name: "Silica Platform & Console",
                 createdAt: "2026",
-                description: "Unified logistics, local shopping, and fleet operations platform powering package deliveries, Shopit, Silica Market, Silica Drive, and the Silica Console.",
+                category: "Platform",
+                description: "Unified logistics, local shopping, and fleet operations platform powering package deliveries, Shopit, Silica Market, Silica Drive, and the centralized Silica Console.",
                 url: "https://silica.ke",
                 github: "https://github.com/colloceo",
                 languages: [
                     { name: "React", iconifyClass: "simple-icons:react" },
-                    { name: "Flutter", iconifyClass: "simple-icons:flutter" },
+                    { name: "TypeScript", iconifyClass: "simple-icons:typescript" },
                 ]
             },
             {
                 id: "12",
                 name: "Locus Journal",
                 createdAt: "2026",
+                category: "Web",
                 description: "A private map journal for capturing places, experiences, and the stories behind them with local-first privacy.",
                 url: "https://locusjournal.com",
                 github: "https://github.com/colloceo",
@@ -275,6 +323,7 @@ export const portfolioData = {
                 id: "14",
                 name: "News254",
                 createdAt: "2025",
+                category: "Web",
                 description: "Digital news and media platform delivering breaking news, politics, business, tech trends, and stories across Kenya.",
                 url: "https://news254ke.co.ke/",
                 github: "https://github.com/colloceo",
@@ -288,6 +337,7 @@ export const portfolioData = {
                 id: "0",
                 name: "AuraMovies",
                 createdAt: "2025",
+                category: "Platform",
                 description: "A high-performance video streaming aggregator built with React, TypeScript, and Supabase. Handled 17,800+ requests in a single day (Dec 24, 2025) with 100% uptime. Features custom firewall rules, bot-protection logic, zero ads, and no signup barriers.",
                 url: "https://auramovies.top",
                 github: "https://github.com/colloceo",
@@ -301,6 +351,7 @@ export const portfolioData = {
                 id: "7",
                 name: "MiniDB",
                 createdAt: "2026",
+                category: "Systems",
                 description: "A custom RDBMS built from scratch in Python. Features O(N) Hash Joins, ACID-compliant Atomic Writes, B-Tree Indexing concepts, and a Flask-based Admin Dashboard. Built for the Pesapal Junior Dev Challenge '26.",
                 url: "https://github.com/colloceo/MiniDB",
                 github: "https://github.com/colloceo/MiniDB",
@@ -353,6 +404,6 @@ export const portfolioData = {
         title: "Contact Me",
         subtitle: "Got a project in mind, want to collaborate, or just want to say hi? My inbox is open for all.",
         number: "+254768581254",
-        email_address: "c.otieno@digitalleap.africa"
+        email_address: "otienocollins0549@gmail.com"
     }
 };

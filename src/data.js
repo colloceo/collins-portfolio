@@ -70,8 +70,8 @@ export const portfolioData = {
             },
         ],
         skills: [
-            "Building full-stack platforms with React, including Aura Movies' streaming interface and More Classifieds' marketplace for 13,000+ Kenyan SMEs",
-            "Developing cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate & Silica Delivery Suite: Silica Client & Silica Drive)",
+            "Building full-stack platforms with React, including Aura Movies' streaming interface and More Business Commerce marketplace for 13,000+ Kenyan SMEs",
+            "Developing cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate, Locus Journal, & Silica Delivery Suite: Silica Client & Silica Drive)",
             "Engineering instant local e-commerce and retail storefront platforms like Shopit with proximity-based dispatch integration",
             "Building Python/FastAPI services, including Aura Movies' torrent-streaming and download API",
             "Building Laravel/MySQL backends, including Digital Leap Africa's LMS with gamification, job boards, and automated certifications",
@@ -163,11 +163,11 @@ export const portfolioData = {
                 experiences: [
                     {
                         title: "Frontend Developer",
-                        company: "More Classifieds Agency Ltd",
+                        company: "More Business Commerce",
                         company_logo: "moreclassifieds.png",
                         duration: "Jan 2026 to Present",
                         location: "Nairobi, KE · Full-time",
-                        description: "Building frontend features for More Classifieds, Kenya's digital marketplace connecting 13,000+ SMEs with buyers. The platform enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
+                        description: "Building frontend features for More Business Commerce, Kenya's digital marketplace connecting 13,000+ SMEs with buyers. The platform enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
                         color: "#FD5320"
                     },
                     {
@@ -255,8 +255,22 @@ export const portfolioData = {
                 ]
             },
             {
+                id: "locus-journal",
+                name: "Locus Journal Mobile App",
+                createdAt: "2026",
+                category: "Mobile",
+                description: "Private map journaling mobile application for pinning places, memories, and field notes where they happened. Features interactive map discovery, mood chips, tag-filtered archives, and local-first zero-account privacy backup.",
+                url: "https://locusjournal.com/",
+                github: "https://github.com/colloceo",
+                languages: [
+                    { name: "Flutter", iconifyClass: "simple-icons:flutter" },
+                    { name: "Dart", iconifyClass: "simple-icons:dart" },
+                    { name: "Mapbox", iconifyClass: "simple-icons:mapbox" },
+                ]
+            },
+            {
                 id: "6",
-                name: "More Classifieds",
+                name: "More Business Commerce",
                 createdAt: "2026",
                 category: "Web",
                 description: "Kenya's digital marketplace connecting 13,000+ SMEs with buyers. Enables local businesses to set up digital storefronts, manage product catalogues, handle direct customer chats, and track analytics across multiple branches from a unified seller dashboard.",
@@ -272,7 +286,7 @@ export const portfolioData = {
                 name: "More Trade",
                 createdAt: "2026",
                 category: "Web",
-                description: "Request for Quote (RFQ) B2B trade portal by More Classifieds connecting verified wholesale suppliers and buyers.",
+                description: "Request for Quote (RFQ) B2B trade portal by More Business Commerce connecting verified wholesale suppliers and buyers.",
                 url: "https://trade.more.co.ke/",
                 github: "https://github.com/colloceo",
                 languages: [

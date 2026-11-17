@@ -64,12 +64,12 @@ const SkillsList = () => {
 
   const skills = {
     "Full-Stack Web & Backend": [
-      "React & TypeScript platforms (Aura Movies, More Classifieds for 13,000+ Kenyan SMEs)",
+      "React & TypeScript platforms (Aura Movies, More Business Commerce for 13,000+ Kenyan SMEs)",
       "Python/FastAPI services & high-concurrency APIs",
       "Laravel/MySQL backends (Digital Leap Africa LMS with gamification & certifications)",
     ],
     "Mobile & Cross-Platform Apps": [
-      "Cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate & Silica Delivery Suite: Client & Drive)",
+      "Cross-platform mobile apps with Flutter for Android & iOS (Koreal Real Estate, Locus Journal, & Silica Delivery Suite: Client & Drive)",
       "Live GPS map tracking, dynamic route navigation & automated driver dispatch",
       "Mobile commerce & storefront platforms (Shopit) with real-time driver proximity shipping",
       "Mobile money (M-Pesa) integration & digital proof of delivery (POD)",

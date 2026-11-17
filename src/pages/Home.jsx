@@ -8,27 +8,27 @@ const Home = () => {
   return (
     <section className="text-[var(--white)] pt-4 md:pt-0" id="home">
       <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 md:pt-24 md:pb-10 pb-8">
-        <div className="text-left space-y-3 md:space-y-5">
+        <div className="text-left space-y-3 md:space-y-4">
           <div className="space-y-1">
-            <p className="text-base sm:text-lg md:text-xl font-medium text-[var(--sec)] flex items-center gap-2 shiny-sec">
+            <p className="text-xs sm:text-sm font-medium text-[var(--sec)] flex items-center gap-2 shiny-sec">
               <span className="inline-block size-2 rounded-full bg-[#A9FF5B] animate-pulse"></span>
               Hi, I'm
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--white)] shiny-white">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-[var(--white)] shiny-white">
               {data.name}
             </h1>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-center space-y-2.5 lg:space-y-0 lg:space-x-8 md:gap-4 pt-1">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--white-icon)] flex-shrink-0 sm:whitespace-nowrap">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-[var(--white-icon)] flex-shrink-0 sm:whitespace-nowrap">
               Software <br className="hidden sm:block" /> Engineer
             </h2>
-            <p className="text-sm sm:text-base md:text-xl text-[var(--white-icon)] leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-[var(--white-icon)] leading-relaxed">
               Crafting{" "}
               <span className="text-[var(--sec)] shiny-sec">
                 spectacular web platforms, Flutter mobile apps, and scalable backends
               </span>
-              . Creator of Koreal Mobile, the Silica Delivery Suite, Shopit e-commerce, and More Classifieds.
+              . Creator of Koreal Mobile, Locus Journal, the Silica Delivery Suite, Shopit e-commerce, AuraMovies, and More Business Commerce.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2 md:pt-4">

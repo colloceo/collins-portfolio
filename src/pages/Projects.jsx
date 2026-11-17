@@ -78,7 +78,31 @@ const projects = [
     ],
   },
   {
-    title: "More Classifieds",
+    title: "Locus Journal Mobile App",
+    category: "Mobile Apps",
+    isMobile: true,
+    previewScreens: [
+      "/assets/images/locus/promo-map.jpg",
+      "/assets/images/locus/promo-capture.jpg",
+    ],
+    image: "/assets/images/locus/promo-map.jpg",
+    link: "https://github.com/colloceo",
+    preview: "https://locusjournal.com/",
+    status: "Live App",
+    technologies: ["Flutter", "Dart", "Mapbox", "Local-First", "Offline Storage"],
+    description:
+      "A private, local-first map journal mobile application for capturing places, personal memories, and field notes where they happened. Features interactive map discovery, mood chips, tag-filtered archives, and zero-account privacy backup.",
+    screenshots: [
+      { src: "/assets/images/locus/promo-map.jpg", title: "Interactive Nairobi Map with entry pins and place markers" },
+      { src: "/assets/images/locus/promo-capture.jpg", title: "Moment Capture: Title, mood chips, photo, weather, and location auto-fill" },
+      { src: "/assets/images/locus/promo-archive.jpg", title: "Locus Archive: Memory search by keywords, locations, and tag filters" },
+      { src: "/assets/images/locus/promo-moods.jpg", title: "Place Details: Visited status, 5-star ratings, notes, and mood tags" },
+      { src: "/assets/images/locus/promo-privacy.jpg", title: "Privacy & Drive Backup: Local-first offline storage, no account required" },
+      { src: "/assets/images/locus/promo-onboarding.jpg", title: "Welcome Onboarding: Personal journaling vs field data collection" },
+    ],
+  },
+  {
+    title: "More Business Commerce",
     category: "Web Platforms",
     isMobile: false,
     image: "/assets/images/morecoke.png",

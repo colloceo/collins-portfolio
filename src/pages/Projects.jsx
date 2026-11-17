@@ -233,15 +233,19 @@ const Projects = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightbox]);
 
-  // Lock body scroll when lightbox is open
+  // Lock body scroll and hide mobile bottom nav when lightbox is open
   useEffect(() => {
+    const nav = document.getElementById("main-nav");
     if (lightbox) {
       document.body.style.overflow = "hidden";
+      if (nav) nav.style.display = "none";
     } else {
       document.body.style.overflow = "unset";
+      if (nav) nav.style.display = "";
     }
     return () => {
       document.body.style.overflow = "unset";
+      if (nav) nav.style.display = "";
     };
   }, [lightbox]);
 
@@ -267,8 +271,8 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Category Filter Pills (Full width, single clean row) */}
-          <div className="flex items-center gap-2 overflow-x-auto py-1.5 no-scrollbar">
+          {/* Category Filter Pills (Full width, single clean row with touch horizontal scroll) */}
+          <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto py-1.5 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
             {CATEGORIES.map((cat) => {
               const count =
                 cat === "All"
@@ -280,7 +284,7 @@ const Projects = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`text-xs sm:text-sm px-4 py-2 rounded-full transition duration-200 border whitespace-nowrap flex-shrink-0 ${
+                  className={`text-xs sm:text-sm px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition duration-200 border whitespace-nowrap flex-shrink-0 ${
                     isActive
                       ? "border-[var(--sec)] bg-[#a476ff22] text-white font-medium shadow-sm"
                       : "border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-white hover:border-[#ffffff30]"
@@ -295,7 +299,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-7">
           {filteredProjects.map((project) => (
             <div
               key={project.title}
@@ -309,51 +313,51 @@ const Projects = () => {
                      ========================================================== */
                   <div
                     onClick={() => openLightbox(project, 0)}
-                    className="relative h-60 sm:h-64 md:h-72 bg-gradient-to-b from-[#191628] via-[#111018] to-[#0a0a0e] p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
+                    className="relative h-60 sm:h-68 md:h-76 bg-gradient-to-b from-[#191628] via-[#111018] to-[#0a0a0e] p-3 sm:p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
                   >
                     {/* Ambient Radial Glow */}
-                    <div className="absolute w-48 h-48 rounded-full bg-purple-600/15 blur-3xl pointer-events-none"></div>
+                    <div className="absolute w-44 sm:w-56 h-44 sm:h-56 rounded-full bg-purple-600/15 blur-3xl pointer-events-none"></div>
 
                     {/* Twin Floating Phones */}
-                    <div className="flex items-center justify-center -space-x-5 sm:-space-x-6 transition-transform duration-300 group-hover/img:scale-105">
+                    <div className="flex items-center justify-center -space-x-4 sm:-space-x-6 transition-transform duration-300 group-hover/img:scale-105">
                       {/* Phone 1 */}
-                      <div className="relative w-[114px] sm:w-[128px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.2rem] sm:rounded-[1.4rem] p-1 shadow-2xl border-[2.5px] border-[#38334c] overflow-hidden -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1">
-                        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 bg-black rounded-full z-10"></div>
+                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#38334c] overflow-hidden -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1">
+                        <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[0]}
                           alt={`${project.title} Screen 1`}
-                          className="w-full h-full object-cover object-top rounded-[0.95rem] sm:rounded-[1.1rem]"
+                          className="w-full h-full object-cover object-top rounded-[0.85rem] sm:rounded-[1.1rem]"
                           loading="lazy"
                         />
                       </div>
 
                       {/* Phone 2 */}
-                      <div className="relative w-[114px] sm:w-[128px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.2rem] sm:rounded-[1.4rem] p-1 shadow-2xl border-[2.5px] border-[#38334c] overflow-hidden rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10">
-                        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2 bg-black rounded-full z-10"></div>
+                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#38334c] overflow-hidden rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10">
+                        <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[1]}
                           alt={`${project.title} Screen 2`}
-                          className="w-full h-full object-cover object-top rounded-[0.95rem] sm:rounded-[1.1rem]"
+                          className="w-full h-full object-cover object-top rounded-[0.85rem] sm:rounded-[1.1rem]"
                           loading="lazy"
                         />
                       </div>
                     </div>
 
                     {/* Single Clean Badge in Top-Right */}
-                    <div className="absolute top-3 right-3 pointer-events-none z-20">
-                      <span className="text-[11px] font-medium tracking-wide px-2.5 py-1 rounded-full bg-black/80 text-[#c4b5fd] border border-purple-500/30 backdrop-blur-md">
+                    <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 pointer-events-none z-20">
+                      <span className="text-[10px] sm:text-[11px] font-medium tracking-wide px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 text-[#c4b5fd] border border-purple-500/30 backdrop-blur-md">
                         {project.category === "E-Commerce" ? "Mobile Store" : "Mobile App"}
                       </span>
                     </div>
 
                     {/* Hover Hint Overlay */}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3 pointer-events-none z-20">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-black/85 text-white border border-white/20 backdrop-blur-md">
+                      <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-medium px-3 py-1.5 rounded-full bg-black/85 text-white border border-white/20 backdrop-blur-md">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="size-4 text-[var(--sec)]"
+                          className="size-3.5 sm:size-4 text-[var(--sec)]"
                         >
                           <path d="M4 5V19H20V7H11.5858L9.58579 5H4ZM12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5Z" />
                         </svg>
@@ -549,11 +553,11 @@ const Projects = () => {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-3 sm:p-6"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 backdrop-blur-md p-2 sm:p-6"
           onClick={closeLightbox}
         >
           <div
-            className="relative max-w-4xl w-full h-[90vh] flex flex-col justify-between items-center"
+            className="relative max-w-4xl w-full h-[96dvh] sm:h-[90vh] flex flex-col justify-between items-center pb-2 sm:pb-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Bar */}
@@ -660,7 +664,7 @@ const Projects = () => {
 
             {/* Thumbnail Bottom Navigation */}
             {lightbox.screenshots.length > 1 && (
-              <div className="w-full flex items-center justify-center gap-2 overflow-x-auto py-2 px-4 max-w-full no-scrollbar">
+              <div className="w-full flex items-center justify-center gap-2 overflow-x-auto py-2.5 px-3 pb-4 sm:pb-2 max-w-full no-scrollbar">
                 {lightbox.screenshots.map((s, idx) => (
                   <button
                     key={idx}
@@ -676,7 +680,7 @@ const Projects = () => {
                     <img
                       src={s.src}
                       alt={`Thumbnail ${idx + 1}`}
-                      className="size-12 sm:size-14 object-cover"
+                      className="size-11 sm:size-14 object-cover"
                     />
                   </button>
                 ))}

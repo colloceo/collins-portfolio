@@ -8,14 +8,21 @@ const Home = () => {
   return (
     <section className="text-[var(--white)] pt-4 md:pt-0" id="home">
       <div className="max-w-5xl mx-auto space-y-5 md:space-y-7 md:pt-24 md:pb-10 pb-8">
-        <div className="text-left space-y-2.5 md:space-y-4">
-          <p className="text-sm md:text-lg text-[var(--white-icon)] shiny-white">
-            Hi, I'm {data.name}
-          </p>
-          <div className="flex flex-col lg:flex-row lg:items-center space-y-2.5 lg:space-y-0 lg:space-x-8 md:gap-4">
-            <h1 className="text-[var(--white)] text-3xl sm:text-4xl md:text-6xl font-medium leading-tight flex-shrink-0 sm:whitespace-nowrap">
-              Software <br className="hidden sm:block" /> Engineer
+        <div className="text-left space-y-3 md:space-y-5">
+          <div className="space-y-1">
+            <p className="text-base sm:text-lg md:text-xl font-medium text-[var(--sec)] flex items-center gap-2 shiny-sec">
+              <span className="inline-block size-2 rounded-full bg-[#A9FF5B] animate-pulse"></span>
+              Hi, I'm
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--white)] shiny-white">
+              {data.name}
             </h1>
+          </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-center space-y-2.5 lg:space-y-0 lg:space-x-8 md:gap-4 pt-1">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--white-icon)] flex-shrink-0 sm:whitespace-nowrap">
+              Software <br className="hidden sm:block" /> Engineer
+            </h2>
             <p className="text-sm sm:text-base md:text-xl text-[var(--white-icon)] leading-relaxed">
               Crafting{" "}
               <span className="text-[var(--sec)] shiny-sec">
@@ -24,10 +31,10 @@ const Home = () => {
               . Creator of Koreal Mobile, the Silica Delivery Suite, Shopit e-commerce, and More Classifieds.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 pt-2 md:pt-4">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2 md:pt-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-5 py-2.5 md:py-3 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#a476ff] text-white font-medium text-sm md:text-base shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 md:py-3 rounded-xl border border-[var(--white-icon-tr)] bg-[#1414149c] hover:bg-[var(--white-icon-tr)] text-white hover:text-[var(--sec)] font-medium text-sm md:text-base transition-all duration-300 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Explore My Work</span>
               <svg
@@ -35,10 +42,10 @@ const Home = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2.5"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="size-4"
+                className="size-4 text-[var(--sec)]"
               >
                 <path d="M7 13l5 5 5-5M12 6v12" />
               </svg>

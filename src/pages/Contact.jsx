@@ -45,20 +45,20 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
           <div className="text-[var(--white-icon)] text-sm md:text-base space-y-2">
             <p className="mb-3">{data.contact.subtitle}</p>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>Location:</span>
               <span className="text-[var(--white)]">{data.location}</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>Email:</span>
               <a
                 href={`mailto:${data.contact.email_address}`}
-                className="text-[var(--white)] hover:text-[var(--sec)] transition-colors"
+                className="text-[var(--white)] hover:text-[var(--sec)] transition-colors break-all"
               >
                 {data.contact.email_address}
               </a>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>Phone:</span>
               <a
                 href={`tel:${data.contact.number}`}

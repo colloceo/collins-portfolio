@@ -396,31 +396,31 @@ const Projects = () => {
                      ========================================================== */
                   <div
                     onClick={() => openLightbox(project, 0)}
-                    className="relative h-60 sm:h-68 md:h-76 bg-gradient-to-b from-[#0c192c] via-[#0a1220] to-[#0a0a0e] p-3 sm:p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
+                    className="relative h-64 sm:h-72 md:h-80 bg-gradient-to-b from-[#0c192c] via-[#0a1220] to-[#0a0a0e] p-3 sm:p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
                   >
                     {/* Ambient Radial Glow */}
                     <div className="absolute w-44 sm:w-56 h-44 sm:h-56 rounded-full bg-sky-500/15 blur-3xl pointer-events-none"></div>
 
-                    {/* Twin Floating Phones */}
-                    <div className="flex items-center justify-center -space-x-4 sm:-space-x-6 transition-transform duration-300 group-hover/img:scale-105">
+                    {/* Twin Floating Phones - Fully fitted with zero clipping */}
+                    <div className="flex items-center justify-center -space-x-3.5 sm:-space-x-5 transition-transform duration-300 group-hover/img:scale-105">
                       {/* Phone 1 */}
-                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] overflow-hidden -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1">
-                        <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
+                      <div className="relative h-[195px] xs:h-[210px] sm:h-[230px] md:h-[245px] aspect-[9/19] bg-black rounded-[1.2rem] sm:rounded-[1.4rem] p-1 sm:p-1.5 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1 flex-shrink-0">
+                        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[0]}
                           alt={`${project.title} Screen 1`}
-                          className="w-full h-full object-cover object-top rounded-[0.85rem] sm:rounded-[1.1rem]"
+                          className="w-full h-full object-cover object-top rounded-[0.95rem] sm:rounded-[1.15rem]"
                           loading="lazy"
                         />
                       </div>
 
                       {/* Phone 2 */}
-                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] overflow-hidden rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10">
-                        <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
+                      <div className="relative h-[195px] xs:h-[210px] sm:h-[230px] md:h-[245px] aspect-[9/19] bg-black rounded-[1.2rem] sm:rounded-[1.4rem] p-1 sm:p-1.5 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10 flex-shrink-0">
+                        <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[1]}
                           alt={`${project.title} Screen 2`}
-                          className="w-full h-full object-cover object-top rounded-[0.85rem] sm:rounded-[1.1rem]"
+                          className="w-full h-full object-cover object-top rounded-[0.95rem] sm:rounded-[1.15rem]"
                           loading="lazy"
                         />
                       </div>

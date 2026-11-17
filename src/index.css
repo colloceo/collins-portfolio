@@ -12,14 +12,14 @@
 
 :root {
   --background: #101010;
-  --sec: #a476ff;
+  --sec: #38bdf8;
   --white: #dfdfdf;
   --white-icon: #f3f3f398;
   --white-icon-tr: #f3f3f310;
   --component-bg: rgba(20, 20, 20, 0.72);
   --container: #141414;
   --line: #2a2a2a;
-  --pink: #a476ff;
+  --pink: #38bdf8;
 }
 
 * {
@@ -86,7 +86,7 @@ body {
 
 /* Shiny text accent from dark-minimal */
 .shiny-sec {
-  background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
+  background: linear-gradient(135deg, #38bdf8 25%, #dbeafe 50%, #38bdf8 75%);
   background-size: 400% 100%;
   -webkit-background-clip: text;
   background-clip: text;

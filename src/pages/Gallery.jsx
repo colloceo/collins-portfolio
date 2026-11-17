@@ -45,7 +45,7 @@ const Gallery = () => {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
                   isActive
-                    ? "border-[var(--sec)] bg-[#a476ff1f] text-white"
+                    ? "border-[var(--sec)] bg-[#38bdf81f] text-white"
                     : "border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-white"
                 }`}
               >

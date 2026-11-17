@@ -203,7 +203,18 @@ const Projects = () => {
     }
   };
 
-  const closeLightbox = () => setLightbox(null);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchStartY, setTouchStartY] = useState(null);
+  const [touchDeltaX, setTouchDeltaX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
+  const thumbnailRefs = useRef([]);
+
+  const closeLightbox = () => {
+    setLightbox(null);
+    setTouchStartX(null);
+    setTouchDeltaX(0);
+    setIsSwiping(false);
+  };
 
   const prevImage = () => {
     if (!lightbox) return;
@@ -219,6 +230,54 @@ const Projects = () => {
       ...prev,
       index: (prev.index + 1) % prev.screenshots.length,
     }));
+  };
+
+  // Auto-scroll active thumbnail into view
+  useEffect(() => {
+    if (lightbox && thumbnailRefs.current[lightbox.index]) {
+      thumbnailRefs.current[lightbox.index].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [lightbox?.index]);
+
+  const onTouchStart = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    setTouchStartX(e.touches[0].clientX);
+    setTouchStartY(e.touches[0].clientY);
+    setTouchDeltaX(0);
+    setIsSwiping(true);
+  };
+
+  const onTouchMove = (e) => {
+    if (touchStartX === null || !e.touches || e.touches.length === 0) return;
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = currentX - touchStartX;
+    const diffY = currentY - (touchStartY ?? currentY);
+
+    // If moving horizontally more than vertically, track swipe
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      setTouchDeltaX(diffX);
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (touchStartX === null) return;
+    const swipeThreshold = 40;
+
+    if (touchDeltaX < -swipeThreshold) {
+      nextImage();
+    } else if (touchDeltaX > swipeThreshold) {
+      prevImage();
+    }
+
+    setTouchStartX(null);
+    setTouchStartY(null);
+    setTouchDeltaX(0);
+    setIsSwiping(false);
   };
 
   useEffect(() => {
@@ -286,7 +345,7 @@ const Projects = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`text-xs sm:text-sm px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition duration-200 border whitespace-nowrap flex-shrink-0 ${
                     isActive
-                      ? "border-[var(--sec)] bg-[#a476ff22] text-white font-medium shadow-sm"
+                      ? "border-[var(--sec)] bg-[#38bdf81f] text-white font-medium shadow-sm"
                       : "border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-white hover:border-[#ffffff30]"
                   }`}
                 >
@@ -313,15 +372,15 @@ const Projects = () => {
                      ========================================================== */
                   <div
                     onClick={() => openLightbox(project, 0)}
-                    className="relative h-60 sm:h-68 md:h-76 bg-gradient-to-b from-[#191628] via-[#111018] to-[#0a0a0e] p-3 sm:p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
+                    className="relative h-60 sm:h-68 md:h-76 bg-gradient-to-b from-[#0c192c] via-[#0a1220] to-[#0a0a0e] p-3 sm:p-4 flex items-center justify-center overflow-hidden border-b border-[var(--white-icon-tr)] cursor-pointer group/img select-none"
                   >
                     {/* Ambient Radial Glow */}
-                    <div className="absolute w-44 sm:w-56 h-44 sm:h-56 rounded-full bg-purple-600/15 blur-3xl pointer-events-none"></div>
+                    <div className="absolute w-44 sm:w-56 h-44 sm:h-56 rounded-full bg-sky-500/15 blur-3xl pointer-events-none"></div>
 
                     {/* Twin Floating Phones */}
                     <div className="flex items-center justify-center -space-x-4 sm:-space-x-6 transition-transform duration-300 group-hover/img:scale-105">
                       {/* Phone 1 */}
-                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#38334c] overflow-hidden -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1">
+                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] overflow-hidden -rotate-3 transform transition-transform duration-300 group-hover/img:-rotate-4 group-hover/img:-translate-x-1">
                         <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[0]}
@@ -332,7 +391,7 @@ const Projects = () => {
                       </div>
 
                       {/* Phone 2 */}
-                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#38334c] overflow-hidden rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10">
+                      <div className="relative w-[100px] xs:w-[112px] sm:w-[126px] md:w-[138px] aspect-[9/18.5] bg-black rounded-[1.1rem] sm:rounded-[1.35rem] p-1 shadow-2xl border-[2px] sm:border-[2.5px] border-[#1e293b] overflow-hidden rotate-3 transform transition-transform duration-300 group-hover/img:rotate-4 group-hover/img:translate-x-1 z-10">
                         <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-1.5 sm:h-2 bg-black rounded-full z-10"></div>
                         <img
                           src={project.previewScreens[1]}
@@ -345,7 +404,7 @@ const Projects = () => {
 
                     {/* Single Clean Badge in Top-Right */}
                     <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 pointer-events-none z-20">
-                      <span className="text-[10px] sm:text-[11px] font-medium tracking-wide px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 text-[#c4b5fd] border border-purple-500/30 backdrop-blur-md">
+                      <span className="text-[10px] sm:text-[11px] font-medium tracking-wide px-2.5 py-0.5 sm:py-1 rounded-full bg-black/80 text-[#7dd3fc] border border-sky-500/30 backdrop-blur-md">
                         {project.category === "E-Commerce" ? "Mobile Store" : "Mobile App"}
                       </span>
                     </div>
@@ -566,9 +625,14 @@ const Projects = () => {
                 <h4 className="text-base sm:text-lg font-semibold text-white">
                   {lightbox.projectTitle}
                 </h4>
-                <p className="text-xs text-[var(--sec)]">
-                  {lightbox.screenshots[lightbox.index].title || `Screen ${lightbox.index + 1}`}
-                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-xs text-[var(--sec)]">
+                    {lightbox.screenshots[lightbox.index].title || `Screen ${lightbox.index + 1}`}
+                  </p>
+                  <span className="text-[10px] text-[var(--white-icon)] opacity-70 sm:hidden">
+                    • Swipe to navigate
+                  </span>
+                </div>
               </div>
 
               <div className="flex items-center gap-3">
@@ -597,8 +661,13 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Main Image Stage */}
-            <div className="relative flex-1 w-full flex items-center justify-center p-2 sm:p-4 overflow-hidden">
+            {/* Main Image Stage with Natural Touch Swipe */}
+            <div
+              className="relative flex-1 w-full flex items-center justify-center p-2 sm:p-4 overflow-hidden touch-pan-y select-none"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
               {/* Prev button */}
               {lightbox.screenshots.length > 1 && (
                 <button
@@ -621,9 +690,13 @@ const Projects = () => {
                 </button>
               )}
 
-              {/* Image Frame */}
+              {/* Image Frame with Touch Follow Translation */}
               <div
-                className={`max-h-full flex items-center justify-center ${
+                style={{
+                  transform: `translateX(${isSwiping ? touchDeltaX * 0.8 : 0}px)`,
+                  transition: isSwiping ? "none" : "transform 0.25s cubic-bezier(0.2, 0, 0, 1)",
+                }}
+                className={`max-h-full flex items-center justify-center will-change-transform ${
                   lightbox.isMobile
                     ? "h-full max-w-[340px] sm:max-w-[380px] p-2 bg-[#121212] rounded-3xl border border-white/20 shadow-2xl overflow-hidden"
                     : "h-full max-w-full rounded-xl overflow-hidden border border-white/10"
@@ -635,7 +708,8 @@ const Projects = () => {
                     lightbox.screenshots[lightbox.index].title ||
                     `${lightbox.projectTitle} screen ${lightbox.index + 1}`
                   }
-                  className="max-h-full max-w-full object-contain rounded-2xl"
+                  className="max-h-full max-w-full object-contain rounded-2xl pointer-events-none select-none"
+                  draggable={false}
                 />
               </div>
 
@@ -668,6 +742,7 @@ const Projects = () => {
                 {lightbox.screenshots.map((s, idx) => (
                   <button
                     key={idx}
+                    ref={(el) => (thumbnailRefs.current[idx] = el)}
                     onClick={() =>
                       setLightbox((prev) => ({ ...prev, index: idx }))
                     }

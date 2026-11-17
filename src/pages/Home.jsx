@@ -112,7 +112,7 @@ const Home = () => {
           <SkillsList />
           <div className="flex justify-center w-full h-[180px] sm:h-[220px] lg:h-[240px] rounded-2xl overflow-hidden">
             <LetterGlitch
-              glitchColors={["#5e4491", "#A476FF", "#241a38"]}
+              glitchColors={["#1e3a8a", "#38bdf8", "#0f172a"]}
               glitchSpeed={33}
               centerVignette={false}
               outerVignette={true}
